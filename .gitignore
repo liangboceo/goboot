@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+.idea
+
+.vscode
+
+go.sum
+__debug_bin
+**/vendor/**

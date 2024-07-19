@@ -1,0 +1,7 @@
+yoyogo:
+  application:
+    name: console_demo
+    metadata: "dev"
+    server:
+      type: "console"
+env: ${MAVEN_HOME}
