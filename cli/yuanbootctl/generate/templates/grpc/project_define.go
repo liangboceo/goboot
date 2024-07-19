@@ -1,6 +1,6 @@
 package grpc
 
-import "yuanbootctl/generate/projects"
+import "github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
 
 var Project = projects.NewEmptyProject("grpc", "Grpc Application").With(func(root *projects.ProjectItem) {
 	clientDir := root.AddDir("client")

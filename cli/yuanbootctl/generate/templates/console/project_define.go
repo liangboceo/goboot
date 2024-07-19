@@ -1,7 +1,7 @@
 package console
 
 import (
-	"yuanbootctl/generate/projects"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
 )
 
 var Project = projects.NewEmptyProject("console", "Console Application").With(func(root *projects.ProjectItem) {

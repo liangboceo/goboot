@@ -1,11 +1,11 @@
 package templates
 
 import (
-	"yuanbootctl/generate/templates/console"
-	"yuanbootctl/generate/templates/grpc"
-	"yuanbootctl/generate/templates/mvc"
-	"yuanbootctl/generate/templates/webapi"
-	"yuanbootctl/generate/templates/xxl_job"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/templates/console"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/templates/grpc"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/templates/mvc"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/templates/webapi"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/templates/xxl_job"
 )
 
 func init() {

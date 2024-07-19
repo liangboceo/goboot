@@ -2,9 +2,9 @@ package cmds
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/utils/consolecolors"
 	"github.com/spf13/cobra"
-	"yuanbootctl/generate/projects"
-	"yuanbootctl/utils/consolecolors"
 )
 
 var VersionCmd = &cobra.Command{

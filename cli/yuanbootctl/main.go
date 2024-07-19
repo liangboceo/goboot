@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/cmds"
 	"github.com/spf13/cobra"
-	"yuanbootctl/cmds"
 )
 
 var rootCmd = &cobra.Command{

@@ -3,12 +3,12 @@ package cmds
 import (
 	"errors"
 	"fmt"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/templates"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/utils/consolecolors"
 	"github.com/spf13/cobra"
 	"strings"
 	"time"
-	"yuanbootctl/generate/projects"
-	"yuanbootctl/generate/templates"
-	"yuanbootctl/utils/consolecolors"
 )
 
 var l bool

@@ -1,9 +1,9 @@
 package templates
 
 import (
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
 	"sort"
 	"sync"
-	"yuanbootctl/generate/projects"
 )
 
 var projectsTmpMap map[string]*projects.Project

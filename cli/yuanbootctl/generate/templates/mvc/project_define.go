@@ -1,6 +1,6 @@
 package mvc
 
-import "yuanbootctl/generate/projects"
+import "github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
 
 var Project = projects.NewEmptyProject("mvc", "MVC Application").With(func(root *projects.ProjectItem) {
 	root.AddDir("controller").AddFileWithContent("democontroller.go", DemoController_Tel)

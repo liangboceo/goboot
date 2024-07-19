@@ -2,10 +2,10 @@ package cmds
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/cli/yuanbootctl/utils"
 	"github.com/spf13/cobra"
 	"runtime"
 	"strings"
-	"yuanbootctl/utils"
 )
 
 var BuildCmd = &cobra.Command{

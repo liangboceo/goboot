@@ -1,6 +1,6 @@
 package xxl_job
 
-import "yuanbootctl/generate/projects"
+import "github.com/liangboceo/yuanboot/cli/yuanbootctl/generate/projects"
 
 var Project = projects.NewEmptyProject("xxl-job", "xxl-job Console Application").With(func(root *projects.ProjectItem) {
 	root.AddFileWithContent("demojob.go", Demo_Job_Tel)
