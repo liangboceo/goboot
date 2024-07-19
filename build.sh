@@ -1,5 +1,5 @@
 #!/usr/bin/Env bash
-osArray=("linux" "darwin" "freebsd" "windows")
+osArray=("linux" "windows")
 archs=("amd64" "386")
 version=${1-"0.0.1-preview1"}
 out_file="yuanbootctl"
