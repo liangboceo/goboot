@@ -1,6 +1,6 @@
 package configuration
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 // YAML config by yaml or yml file
 func YAML(configPath string) *abstractions.Configuration {

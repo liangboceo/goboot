@@ -13,7 +13,7 @@ import (
 
 func NewGormDb(source *MySqlDataSource) *gorm.DB {
 	timestr := time.Now().Format("2006/01/02 - 15:04:05.00")
-	logPrefix := fmt.Sprintf("%s - [YOYOGO] - [DEBUG] ", timestr)
+	logPrefix := fmt.Sprintf("%s - [yuanboot] - [DEBUG] ", timestr)
 	dbLogger := logger.New(
 		log.New(os.Stdout, logPrefix, log.LstdFlags), // io writer（日志输出的目标，前缀和日志包含的内容——译者注）
 		logger.Config{

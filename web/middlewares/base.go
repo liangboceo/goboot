@@ -1,6 +1,6 @@
 package middlewares
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 type IConfigurationMiddleware interface {
 	SetConfiguration(config abstractions.IConfiguration)

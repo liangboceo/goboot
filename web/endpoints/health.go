@@ -1,10 +1,10 @@
 package endpoints
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/health"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/router"
+	"github.com/liangboceo/yuanboot/abstractions/health"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/router"
 )
 
 func UseHealth(router router.IRouterBuilder) {

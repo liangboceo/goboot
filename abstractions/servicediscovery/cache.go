@@ -2,7 +2,7 @@ package servicediscovery
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
 	"math"
 	"math/rand"
 	"sync"

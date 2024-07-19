@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/web/context"
 	"net/http"
 )
 

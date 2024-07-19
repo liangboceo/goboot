@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/web"
-	"github.com/yoyofx/yoyogo/web/actionresult/extension"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/web"
+	"github.com/liangboceo/yuanboot/web/actionresult/extension"
+	"github.com/liangboceo/yuanboot/web/mvc"
 	"github.com/yoyofxteam/dependencyinjection"
 	"mvcdemo/controllers"
 )
@@ -13,7 +13,7 @@ func main() {
 	CreateMVCBuilder().Build().Run()
 }
 
-//* Create the builder of Web host
+// * Create the builder of Web host
 func CreateMVCBuilder() *abstractions.HostBuilder {
 	configuration := abstractions.NewConfigurationBuilder().
 		AddEnvironment().

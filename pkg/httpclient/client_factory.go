@@ -2,7 +2,7 @@ package httpclient
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"regexp"
 	"strings"
 )

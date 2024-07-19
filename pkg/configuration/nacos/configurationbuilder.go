@@ -1,7 +1,7 @@
 package nacos
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions"
 	nacos_viper_remote "github.com/yoyofxteam/nacos-viper-remote"
 )
 

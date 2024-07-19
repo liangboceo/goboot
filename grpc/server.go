@@ -1,8 +1,8 @@
 package grpc
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/hostenv"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/hostenv"
 	"google.golang.org/grpc/reflection"
 	"log"
 	"net"

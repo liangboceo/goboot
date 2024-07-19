@@ -2,8 +2,8 @@ package web
 
 import (
 	"github.com/fasthttp/websocket"
+	"github.com/liangboceo/yuanboot/web/context"
 	"github.com/valyala/fasthttp"
-	"github.com/yoyofx/yoyogo/web/context"
 	"log"
 	"net/http"
 )

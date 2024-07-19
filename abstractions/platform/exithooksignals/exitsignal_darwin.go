@@ -2,7 +2,7 @@ package exithooksignals
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions"
 	"os"
 	"os/signal"
 	"syscall"

@@ -1,8 +1,8 @@
 package tests
 
 import (
+	"github.com/liangboceo/yuanboot/web/mvc"
 	"github.com/magiconair/properties/assert"
-	"github.com/yoyofx/yoyogo/web/mvc"
 	"strings"
 	"testing"
 )

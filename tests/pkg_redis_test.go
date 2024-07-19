@@ -4,7 +4,7 @@ package tests
 //import (
 //	"fmt"
 //	"github.com/stretchr/testify/assert"
-//	"github.com/yoyofx/yoyogo/pkg/cache/redis"
+//	"github.com/liangboceo/yuanboot/pkg/cache/redis"
 //	"math/rand"
 //	"strconv"
 //	"testing"
@@ -12,7 +12,7 @@ package tests
 //)
 //
 //var client = redis.NewClient(&redis.Options{
-//	Addr:     "m.yoyogo.run:6379",
+//	Addr:     "m.yuanboot.run:6379",
 //	Password: "123.com",
 //	DB:       0,
 //})

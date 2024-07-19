@@ -2,7 +2,7 @@ package view
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/utils"
+	"github.com/liangboceo/yuanboot/utils"
 	"os"
 	"path/filepath"
 	"reflect"

@@ -2,8 +2,8 @@ package servicediscovery
 
 import (
 	"github.com/google/uuid"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"strconv"
 )
 

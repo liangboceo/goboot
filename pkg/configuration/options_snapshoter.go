@@ -1,6 +1,6 @@
 package configuration
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 type OptionsSnapshot[T any] struct {
 	config      abstractions.IConfiguration

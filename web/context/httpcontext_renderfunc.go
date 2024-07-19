@@ -1,7 +1,7 @@
 package context
 
 import (
-	"github.com/yoyofx/yoyogo/web/actionresult"
+	"github.com/liangboceo/yuanboot/web/actionresult"
 	"net/http"
 	"sync"
 )

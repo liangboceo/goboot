@@ -2,9 +2,9 @@ package tests
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/web/mvc"
+	"github.com/liangboceo/yuanboot/web/view"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/web/mvc"
-	"github.com/yoyofx/yoyogo/web/view"
 	"os"
 	"path/filepath"
 	"testing"

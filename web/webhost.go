@@ -1,9 +1,9 @@
 package web
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/platform/exithooksignals"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/platform/exithooksignals"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
 )
 
 type WebHost struct {

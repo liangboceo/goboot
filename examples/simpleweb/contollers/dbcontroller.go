@@ -2,11 +2,11 @@ package contollers
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/pkg/cache/redis"
-	"github.com/yoyofx/yoyogo/pkg/configuration"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/pkg/cache/redis"
+	"github.com/liangboceo/yuanboot/pkg/configuration"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/mvc"
 	"gorm.io/gorm"
 	"simpleweb/models"
 )

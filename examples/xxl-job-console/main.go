@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/configuration"
-	"github.com/yoyofx/yoyogo/pkg/scheduler"
+	"github.com/liangboceo/yuanboot/abstractions/configuration"
+	"github.com/liangboceo/yuanboot/pkg/scheduler"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

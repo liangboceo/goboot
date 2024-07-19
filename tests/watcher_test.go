@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/memory"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/memory"
 	"testing"
 	"time"
 )

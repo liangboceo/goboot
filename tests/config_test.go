@@ -1,8 +1,8 @@
 package tests
 
 import (
+	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/abstractions"
 	"os"
 	"testing"
 )
@@ -14,7 +14,7 @@ type Profile struct {
 }
 
 func TestEnv(t *testing.T) {
-	_ = os.Setenv("MYNAMESPACE", "space.yoyogo.run")
+	_ = os.Setenv("MYNAMESPACE", "space.yuanboot.run")
 	_ = os.Setenv("CUSTOM_ENV", "my env variable")
 	_ = os.Setenv("REMOTE_HOST", "my host")
 
@@ -25,7 +25,7 @@ func TestEnv(t *testing.T) {
 	var profile Profile
 	config.GetConfigObject("profile", &profile)
 
-	assert.Equal(t, profile.NS, "space.yoyogo.run")
+	assert.Equal(t, profile.NS, "space.yuanboot.run")
 	assert.Equal(t, profile.DNS, "my host")
 	assert.Equal(t, profile.IP, "10.0.1.12")
 

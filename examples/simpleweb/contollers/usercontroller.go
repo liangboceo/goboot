@@ -2,13 +2,13 @@ package contollers
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/web/actionresult"
-	"github.com/yoyofx/yoyogo/web/binding"
-	"github.com/yoyofx/yoyogo/web/captcha"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/web/actionresult"
+	"github.com/liangboceo/yuanboot/web/binding"
+	"github.com/liangboceo/yuanboot/web/captcha"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/mvc"
 	"mime/multipart"
 	"simpleweb/models"
 	"time"
@@ -73,7 +73,7 @@ func (controller UserController) GetInfo() mvc.ApiResult {
 }
 
 func (controller UserController) GetSD() mvc.ApiResult {
-	serviceList := controller.discoveryClient.GetAllInstances("yoyogo_demo_dev")
+	serviceList := controller.discoveryClient.GetAllInstances("yuanboot_demo_dev")
 	return controller.OK(serviceList)
 }
 

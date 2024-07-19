@@ -1,6 +1,6 @@
 package console
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 type ApplicationBuilder struct {
 	hostBuilderContext *abstractions.HostBuilderContext

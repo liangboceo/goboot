@@ -2,12 +2,12 @@ package controllers
 
 import (
 	"github.com/fasthttp/websocket"
-	"github.com/yoyofx/yoyogo/pkg/cache/redis"
-	redisdb "github.com/yoyofx/yoyogo/pkg/datasources/redis"
-	"github.com/yoyofx/yoyogo/web"
-	"github.com/yoyofx/yoyogo/web/actionresult"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/pkg/cache/redis"
+	redisdb "github.com/liangboceo/yuanboot/pkg/datasources/redis"
+	"github.com/liangboceo/yuanboot/web"
+	"github.com/liangboceo/yuanboot/web/actionresult"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/mvc"
 	"websockethub/hubs"
 )
 
@@ -37,7 +37,7 @@ func (controller HubController) GetWs(ctx *context.HttpContext) {
 func (controller HubController) GetTodoList() actionresult.IActionResult {
 	conn, _, _ := controller.redisClient.Open()
 	client := conn.(redis.IClient)
-	json, _ := client.GetKVOps().GetString("yoyogo:todolist")
+	json, _ := client.GetKVOps().GetString("yuanboot:todolist")
 	return actionresult.Data{
 		ContentType: "application/json; charset=utf-8",
 		Data:        []byte(json),
@@ -48,7 +48,7 @@ func (controller HubController) PostTodoSync(ctx *context.HttpContext) mvc.ApiRe
 	json := string(ctx.Input.GetBody())
 	conn, _, _ := controller.redisClient.Open()
 	client := conn.(redis.IClient)
-	_ = client.GetKVOps().SetString("yoyogo:todolist", json, 0)
+	_ = client.GetKVOps().SetString("yuanboot:todolist", json, 0)
 
 	return controller.OK("ok")
 }

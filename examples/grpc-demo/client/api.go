@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	grpconn "github.com/yoyofx/yoyogo/grpc/conn"
+	grpconn "github.com/liangboceo/yuanboot/grpc/conn"
 	pb "grpc-demo/proto/helloworld"
 	"io"
 	"log"
@@ -14,7 +14,7 @@ type Api struct {
 }
 
 func NewHelloworldApi(factory *grpconn.Factory) *Api {
-	clientConn, err := factory.CreateClientConn("grpc://public/[yoyogo_grpc_dev]")
+	clientConn, err := factory.CreateClientConn("grpc://public/[yuanboot_grpc_dev]")
 	if err != nil {
 		log.Println(err)
 		return nil

@@ -6,7 +6,7 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"io/ioutil"
 	"net"
 	"net/http"

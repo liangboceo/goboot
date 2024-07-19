@@ -2,8 +2,8 @@ package tests
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/web/context"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/web/context"
 	"github.com/yoyofxteam/reflectx"
 	"testing"
 )
@@ -12,11 +12,11 @@ import (
 //import (
 //	"fmt"
 //	"github.com/stretchr/testify/assert"
-//	"github.com/yoyofx/yoyogo/examples/simpleweb/contollers"
-//	"github.com/yoyofx/yoyogo/utils"
-//	"github.com/yoyofx/yoyogo/utils/Reflect"
-//	"github.com/yoyofx/yoyogo/web/context"
-//	"github.com/yoyofx/yoyogo/web/mvc"
+//	"github.com/liangboceo/yuanboot/examples/simpleweb/contollers"
+//	"github.com/liangboceo/yuanboot/utils"
+//	"github.com/liangboceo/yuanboot/utils/Reflect"
+//	"github.com/liangboceo/yuanboot/web/context"
+//	"github.com/liangboceo/yuanboot/web/mvc"
 //	"github.com/yoyofxteam/reflectx"
 //	"testing"
 //)

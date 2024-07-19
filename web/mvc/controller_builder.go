@@ -1,10 +1,10 @@
 package mvc
 
 import (
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/view"
 	"github.com/nacos-group/nacos-sdk-go/common/logger"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/view"
 	"github.com/yoyofxteam/reflectx"
 	"reflect"
 	"strings"
@@ -30,7 +30,7 @@ func (builder *ControllerBuilder) AddViews(option *view.Option) {
 // AddViewsByConfig add views by config
 func (builder *ControllerBuilder) AddViewsByConfig() {
 	if builder.configuration != nil {
-		section := builder.configuration.GetSection("yoyogo.application.server.mvc.views")
+		section := builder.configuration.GetSection("yuanboot.application.server.mvc.views")
 		option := &view.Option{}
 		section.Unmarshal(option)
 		builder.mvcRouterHandler.Options.ViewOption = option

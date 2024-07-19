@@ -1,6 +1,6 @@
-yoyogo:
+yuanboot:
   application:
-    name: yoyogo_grpc_dev
+    name: yuanboot_grpc_dev
     metadata: "develop"
     server:
       type: "grpc"
@@ -35,7 +35,7 @@ yoyogo:
 #      metadata:
 #         datacenter: ""
 #         address:
-#           - "http://sd.yoyogo.run/eureka"
+#           - "http://sd.yuanboot.run/eureka"
 #         ttl: 30   # seconds
 #      type: "etcd"
 #      metadata:

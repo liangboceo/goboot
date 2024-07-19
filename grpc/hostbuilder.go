@@ -1,6 +1,6 @@
 package grpc
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 type HostBuilder struct {
 	abstractions.HostBuilder

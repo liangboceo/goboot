@@ -1,9 +1,9 @@
 package middlewares
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/middlewares/cors"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/middlewares/cors"
 )
 
 type CORSMiddleware struct {
@@ -20,12 +20,12 @@ func NewCORS() *CORSMiddleware {
 
 func (corsmw *CORSMiddleware) SetConfiguration(config abstractions.IConfiguration) {
 	if config != nil {
-		c := config.Get("yoyogo.application.server.cors")
+		c := config.Get("yuanboot.application.server.cors")
 		corsmw.Enable = c != nil
 	}
 	if corsmw.Enable {
 		corsConfig := cors.DefaultConfig()
-		allowOrigins, _ := config.Get("yoyogo.application.server.cors.allow_origins").([]interface{})
+		allowOrigins, _ := config.Get("yuanboot.application.server.cors.allow_origins").([]interface{})
 		if allowOrigins != nil {
 			for _, ao := range allowOrigins {
 				corsConfig.AllowOrigins = append(corsConfig.AllowOrigins, ao.(string))
@@ -33,14 +33,14 @@ func (corsmw *CORSMiddleware) SetConfiguration(config abstractions.IConfiguratio
 			//corsConfig.AllowOrigins = allowOrigins
 		}
 		var ams []string
-		allowMethods, _ := config.Get("yoyogo.application.server.cors.allow_methods").([]interface{})
+		allowMethods, _ := config.Get("yuanboot.application.server.cors.allow_methods").([]interface{})
 		if allowMethods != nil {
 			for _, am := range allowMethods {
 				ams = append(ams, am.(string))
 			}
 			corsConfig.AllowMethods = ams
 		}
-		allowCredentials, _ := config.Get("yoyogo.application.server.cors.allow_credentials").(bool)
+		allowCredentials, _ := config.Get("yuanboot.application.server.cors.allow_credentials").(bool)
 		if allowMethods != nil {
 			corsConfig.AllowCredentials = allowCredentials
 		}

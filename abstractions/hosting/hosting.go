@@ -1,7 +1,7 @@
 package hosting
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

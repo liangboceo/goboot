@@ -1,6 +1,6 @@
 package models
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 type DbConfig struct {
 	Name     string `mapstructure:"name" config:"name"`
@@ -12,6 +12,6 @@ type DbConfig struct {
 
 // NewDbConfig 托管到IConfiguration和依赖注入中管理
 func NewDbConfig(configuration abstractions.IConfiguration) (config DbConfig) {
-	configuration.GetConfigObject("yoyogo.datasource.db", &config)
+	configuration.GetConfigObject("yuanboot.datasource.db", &config)
 	return config
 }

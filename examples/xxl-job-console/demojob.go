@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/pkg/scheduler"
+	"github.com/liangboceo/yuanboot/pkg/scheduler"
 	"time"
 )
 
@@ -23,7 +23,7 @@ func (*DemoJob) Execute(cxt *scheduler.JobContext) (msg string) {
 	return cxt.Done("666")
 }
 
-//GetJobName 自定义任务的名字
+// GetJobName 自定义任务的名字
 func (*DemoJob) GetJobName() string {
 	return "job1"
 }

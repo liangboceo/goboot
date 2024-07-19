@@ -1,8 +1,8 @@
 package captcha
 
 import (
-	"github.com/yoyofx/yoyogo/pkg/captcha"
-	"github.com/yoyofx/yoyogo/utils"
+	"github.com/liangboceo/yuanboot/pkg/captcha"
+	"github.com/liangboceo/yuanboot/utils"
 	"strings"
 )
 

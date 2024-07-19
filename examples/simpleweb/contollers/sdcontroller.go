@@ -1,10 +1,10 @@
 package contollers
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/pkg/httpclient"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/pkg/httpclient"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/mvc"
 )
 
 type SDController struct {
@@ -20,7 +20,7 @@ func NewSDController(sd servicediscovery.IServiceDiscoveryClient, cache serviced
 }
 
 func (controller *SDController) GetSD() mvc.ApiResult {
-	serviceList := controller.discoveryClient.GetAllInstances("yoyogo_demo_dev")
+	serviceList := controller.discoveryClient.GetAllInstances("yuanboot_demo_dev")
 	return controller.OK(serviceList)
 }
 
@@ -30,17 +30,17 @@ func (controller *SDController) GetServices() mvc.ApiResult {
 }
 
 func (controller *SDController) GetCacheServices() mvc.ApiResult {
-	serviceList, _ := controller.discoveryCache.GetService("yoyogo_demo_dev")
+	serviceList, _ := controller.discoveryCache.GetService("yuanboot_demo_dev")
 	return controller.OK(serviceList)
 }
 
 func (controller *SDController) GetOne() mvc.ApiResult {
-	serviceList, _ := controller.discoverySelector.Select("yoyogo_demo_dev")
+	serviceList, _ := controller.discoverySelector.Select("yuanboot_demo_dev")
 	return controller.OK(serviceList)
 }
 
 func (controller *SDController) HttpTest() mvc.ApiResult {
-	client, err := controller.httpFactory.Create("http://[yoyogo_demo_dev]")
+	client, err := controller.httpFactory.Create("http://[yuanboot_demo_dev]")
 	if err != nil {
 		panic(err)
 	}

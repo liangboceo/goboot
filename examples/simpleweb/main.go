@@ -3,22 +3,22 @@ package main
 import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/pkg/configuration"
-	_ "github.com/yoyofx/yoyogo/pkg/datasources/mysql"
-	_ "github.com/yoyofx/yoyogo/pkg/datasources/redis"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/nacos"
-	"github.com/yoyofx/yoyogo/pkg/swagger"
-	"github.com/yoyofx/yoyogo/web"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/endpoints"
-	"github.com/yoyofx/yoyogo/web/middlewares"
-	"github.com/yoyofx/yoyogo/web/mvc"
-	"github.com/yoyofx/yoyogo/web/router"
-	"github.com/yoyofx/yoyogo/web/session"
-	"github.com/yoyofx/yoyogo/web/session/identity"
-	"github.com/yoyofx/yoyogo/web/session/store"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/pkg/configuration"
+	_ "github.com/liangboceo/yuanboot/pkg/datasources/mysql"
+	_ "github.com/liangboceo/yuanboot/pkg/datasources/redis"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/nacos"
+	"github.com/liangboceo/yuanboot/pkg/swagger"
+	"github.com/liangboceo/yuanboot/web"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/endpoints"
+	"github.com/liangboceo/yuanboot/web/middlewares"
+	"github.com/liangboceo/yuanboot/web/mvc"
+	"github.com/liangboceo/yuanboot/web/router"
+	"github.com/liangboceo/yuanboot/web/session"
+	"github.com/liangboceo/yuanboot/web/session/identity"
+	"github.com/liangboceo/yuanboot/web/session/store"
 	"github.com/yoyofxteam/dependencyinjection"
 	"simpleweb/contollers"
 	"simpleweb/hubs"
@@ -107,13 +107,13 @@ func registerEndpointRouterConfig(rb router.IRouterBuilder) {
 	endpoints.UseRouteInfo(rb)
 	endpoints.UseSwaggerDoc(rb,
 		swagger.Info{
-			Title:          "YoyoGO 框架文档演示",
+			Title:          "yuanboot 框架文档演示",
 			Version:        "v1.0.0",
-			Description:    "框架文档演示swagger文档 v1.0 [ #yoyogo](https://github.com/yoyofx/yoyogo).",
-			TermsOfService: "https://dev.yoyogo.run",
+			Description:    "框架文档演示swagger文档 v1.0 [ #yuanboot](https://github.com/liangboceo/yuanboot).",
+			TermsOfService: "https://dev.yuanboot.run",
 			Contact: swagger.Contact{
 				Email: "zl.hxd@hotmail.com",
-				Name:  "yoyogo",
+				Name:  "yuanboot",
 			},
 			License: swagger.License{
 				Name: "MIT",
@@ -147,7 +147,7 @@ func registerEndpointRouterConfig(rb router.IRouterBuilder) {
 //endregion
 
 func SetSession(ctx *context.HttpContext) {
-	ctx.GetSession().SetValue("user", "yoyogo")
+	ctx.GetSession().SetValue("user", "yuanboot")
 	ctx.JSON(200, context.H{"ok": true})
 }
 
@@ -196,7 +196,7 @@ func PostInfo(ctx *context.HttpContext) {
 func getApplicationLifeEvent(life *abstractions.ApplicationLife) {
 	printDataEvent := func(event abstractions.ApplicationEvent) {
 		xlog.GetXLogger("Application Life Event:").Debug("Topic: %s; Event: %v", event.Topic, event.Data)
-		//fmt.Printf("[yoyogo] Topic: %s; Event: %v\n", event.Topic, event.Data)
+		//fmt.Printf("[yuanboot] Topic: %s; Event: %v\n", event.Topic, event.Data)
 	}
 
 	for {

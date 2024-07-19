@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/yoyofx/yoyogo/web/actionresult/extension"
+	"github.com/liangboceo/yuanboot/web/actionresult/extension"
 	"html/template"
 	"net/http"
 )

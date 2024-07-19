@@ -2,7 +2,7 @@ package services
 
 import (
 	"context"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
 	pb "grpc-demo/proto/helloworld"
 	"io"
 	"strconv"
@@ -47,7 +47,7 @@ func (s *GreeterServer) SayRecord(stream pb.Greeter_SayRecordServer) error {
 	}
 }
 
-//     // Bidirectional streaming RPC 双向流式 RPC
+// // Bidirectional streaming RPC 双向流式 RPC
 func (s *GreeterServer) SayRoute(stream pb.Greeter_SayRouteServer) error {
 	n := 0
 	for {

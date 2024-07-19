@@ -8,7 +8,7 @@ docker exec -it etcd bin/sh
 
 export ETCDCTL_API=3
 
-etcdctl get /public/yoyogo_demo_dev/8ca0e6c8-1896-4fdc-a775-ab565a84f166
+etcdctl get /public/yuanboot_demo_dev/8ca0e6c8-1896-4fdc-a775-ab565a84f166
 
 ```
 

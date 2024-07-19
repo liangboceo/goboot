@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	yrpc "github.com/yoyofx/yoyogo/grpc"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/nacos"
+	"github.com/liangboceo/yuanboot/abstractions"
+	yrpc "github.com/liangboceo/yuanboot/grpc"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/nacos"
 	"github.com/yoyofxteam/dependencyinjection"
 	"google.golang.org/grpc"
 	pb "grpc-demo/proto/helloworld"

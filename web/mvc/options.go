@@ -1,6 +1,6 @@
 package mvc
 
-import "github.com/yoyofx/yoyogo/web/view"
+import "github.com/liangboceo/yuanboot/web/view"
 
 const (
 	DefaultMvcTemplate = "v1/{controller}/{action}"

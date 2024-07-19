@@ -2,9 +2,9 @@ package tests
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/abstractions/pool"
 	"github.com/stretchr/testify/assert"
 	_ "github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/abstractions/pool"
 	"net"
 	"testing"
 	"time"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/web/context"
 	"grafanaalertwebhook/wechatrequests"
 )
 

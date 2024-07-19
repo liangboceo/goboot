@@ -2,7 +2,7 @@ package consul
 
 import (
 	consul "github.com/hashicorp/consul/api"
-	"github.com/yoyofx/yoyogo/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions"
 	"log"
 )
 

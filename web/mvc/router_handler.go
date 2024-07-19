@@ -2,8 +2,8 @@ package mvc
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/view"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/view"
 	"net/http"
 	"strings"
 )

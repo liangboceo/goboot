@@ -1,6 +1,6 @@
-yoyogo:
+yuanboot:
   application:
-    name: yoyogo_grpc_clientdemo    # go build grpc-demo/client --profile=test
+    name: yuanboot_grpc_clientdemo    # go build grpc-demo/client --profile=test
     metadata: "grpc client demo"
     server:
       type: "console"

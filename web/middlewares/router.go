@@ -1,12 +1,12 @@
 package middlewares
 
 import (
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/router"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/router"
 	"strings"
 )
 
-//var ReqFuncMap = make(map[string]func(ctx * YoyoGo.HttpContext))
+//var ReqFuncMap = make(map[string]func(ctx * yuanboot.HttpContext))
 
 type RouterMiddleware struct {
 	RouterBuilder router.IRouterBuilder

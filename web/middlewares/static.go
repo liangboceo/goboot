@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/web/context"
 	"net/http"
 	"os"
 	"strings"
@@ -33,7 +33,7 @@ func NewStatic(patten string, path string) *Static {
 
 func NewStaticWithConfig(configuration abstractions.IConfiguration) *Static {
 	if configuration != nil {
-		config := configuration.GetSection("yoyogo.application.server.static")
+		config := configuration.GetSection("yuanboot.application.server.static")
 		patten := config.Get("patten").(string)
 		path := config.Get("webroot").(string)
 		return NewStatic(patten, path)

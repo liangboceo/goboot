@@ -4,9 +4,9 @@ import (
 	"github.com/SkyAPM/go2sky"
 	"github.com/SkyAPM/go2sky/reporter"
 	"github.com/google/uuid"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
 	"strconv"
 )
 
@@ -26,8 +26,8 @@ func NewRequestTracker() *RequestTrackerMiddleware {
 
 func (router *RequestTrackerMiddleware) SetConfiguration(config abstractions.IConfiguration) {
 	if config != nil {
-		serviceName, _ := config.Get("yoyogo.application.name").(string)
-		skyworkingAddr, _ := config.Get("yoyogo.cloud.apm.skyworking.address").(string)
+		serviceName, _ := config.Get("yuanboot.application.name").(string)
+		skyworkingAddr, _ := config.Get("yuanboot.cloud.apm.skyworking.address").(string)
 		router.logger = xlog.GetXLogger("Skyworking APM")
 
 		router.reporter, _ = reporter.NewGRPCReporter(skyworkingAddr)

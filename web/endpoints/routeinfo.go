@@ -2,11 +2,11 @@ package endpoints
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/mvc"
-	"github.com/yoyofx/yoyogo/web/router"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/mvc"
+	"github.com/liangboceo/yuanboot/web/router"
 	"strings"
 	"sync"
 )

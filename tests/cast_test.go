@@ -1,9 +1,9 @@
 package tests
 
 import (
+	"github.com/liangboceo/yuanboot/utils"
+	"github.com/liangboceo/yuanboot/utils/cast"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/utils"
-	"github.com/yoyofx/yoyogo/utils/cast"
 	"testing"
 )
 

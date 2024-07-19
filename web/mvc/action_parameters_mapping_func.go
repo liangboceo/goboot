@@ -2,8 +2,8 @@ package mvc
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/web/binding"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/web/binding"
+	"github.com/liangboceo/yuanboot/web/context"
 	"reflect"
 )
 
@@ -25,8 +25,11 @@ func httpContextMappingMapping(paramName string, paramTypeName string, paramType
 	return value, err
 }
 
-/**
- 绑定
+/*
+*
+
+	绑定
+
 form-data/multipart-form , json , uri , header
 tags: json , form , uri ,header
 */

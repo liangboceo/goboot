@@ -4,7 +4,7 @@ import (
 	"errors"
 	"github.com/hashicorp/consul/api"
 	"github.com/hashicorp/consul/api/watch"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"log"
 	"os"
 	"sync"

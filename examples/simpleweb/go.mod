@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/fasthttp/websocket v1.5.7
 	github.com/go-sql-driver/mysql v1.6.0
-	github.com/yoyofx/yoyogo v0.0.0
+	github.com/liangboceo/yuanboot v0.0.0
 	github.com/yoyofxteam/dependencyinjection v1.0.1
 	gorm.io/gorm v1.21.11
 )
@@ -89,4 +89,4 @@ require (
 	skywalking.apache.org/repo/goapi v0.0.0-20220401015832-2c9eee9481eb // indirect
 )
 
-replace github.com/yoyofx/yoyogo => ../../
+replace github.com/liangboceo/yuanboot => ../../

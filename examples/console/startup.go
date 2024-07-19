@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/hosting"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/hosting"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

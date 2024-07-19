@@ -1,4 +1,4 @@
-module github.com/yoyofx/yoyogo
+module github.com/liangboceo/yuanboot
 
 go 1.18
 

@@ -2,8 +2,8 @@ package tests
 
 import (
 	"encoding/json"
+	abshealth "github.com/liangboceo/yuanboot/abstractions/health"
 	"github.com/stretchr/testify/assert"
-	abshealth "github.com/yoyofx/yoyogo/abstractions/health"
 	"testing"
 )
 

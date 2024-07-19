@@ -1,6 +1,6 @@
 package etcd
 
-import "github.com/yoyofx/yoyogo/abstractions"
+import "github.com/liangboceo/yuanboot/abstractions"
 
 type Config struct {
 	ENV       *abstractions.HostEnvironment

@@ -2,7 +2,7 @@ package contollers
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/web/mvc"
 )
 
 type TestActionFilter struct {

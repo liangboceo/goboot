@@ -1,6 +1,6 @@
 package memory
 
-import "github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+import "github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 
 type MemoryCache struct {
 	Services []string

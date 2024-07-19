@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/hosting"
-	"github.com/yoyofx/yoyogo/console"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/nacos"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/hosting"
+	"github.com/liangboceo/yuanboot/console"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/nacos"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

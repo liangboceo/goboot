@@ -1,11 +1,11 @@
 package router
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/platform/consolecolors"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/mvc"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/mvc"
 	"net/url"
 	"path"
 	"reflect"
@@ -40,7 +40,7 @@ func (router *DefaultRouterBuilder) SetConfiguration(config abstractions.IConfig
 		return
 	}
 	// server.path
-	serverPath, hasPath := config.Get("yoyogo.application.server.path").(string)
+	serverPath, hasPath := config.Get("yuanboot.application.server.path").(string)
 	if hasPath {
 		router.endPointRouterHandler.Component = serverPath
 		router.log.Info("server.path:  %s", consolecolors.Green(serverPath))
@@ -48,7 +48,7 @@ func (router *DefaultRouterBuilder) SetConfiguration(config abstractions.IConfig
 
 	if router.mvcControllerBuilder != nil {
 		// mvc.template
-		mvcTemplate, hasTemplate := config.Get("yoyogo.application.server.mvc.template").(string)
+		mvcTemplate, hasTemplate := config.Get("yuanboot.application.server.mvc.template").(string)
 		if !hasTemplate {
 			mvcTemplate = mvc.DefaultMvcTemplate
 		}

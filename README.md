@@ -1,18 +1,16 @@
-<img src="https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/yoyogo.png" width = "380px" height = "120px" alt="" align=center />[中文](https://github.com/yoyofx/yoyogo/blob/master/README.md)  / [English](https://github.com/yoyofx/yoyogo/blob/master/README_En.md)
 
-YoyoGo 简单、轻量、快速、基于依赖注入的微服务框架
+yuanboot 简单、轻量、快速、基于依赖注入的微服务框架
 
-* 文档： https://dev.yoyogo.run
 
-![Release](https://img.shields.io/github/v/tag/yoyofx/yoyogo.svg?color=24B898&label=release&logo=github&sort=semver)
-![Go](https://github.com/yoyofx/yoyogo/workflows/Go/badge.svg)
-![GoVersion](https://img.shields.io/github/go-mod/go-version/yoyofx/yoyogo)
-[![Report](https://goreportcard.com/badge/github.com/yoyofx/yoyogo)](https://goreportcard.com/report/github.com/yoyofx/yoyogo)
-[![Documentation](https://img.shields.io/badge/godoc-reference-blue.svg?color=24B898&logo=go&logoColor=ffffff)](https://godoc.org/github.com/yoyofx/yoyogo)
-![Contributors](https://img.shields.io/github/contributors/yoyofx/yoyogo.svg)
+![Release](https://img.shields.io/github/v/tag/liangboceo/yuanboot.svg?color=24B898&label=release&logo=github&sort=semver)
+![Go](https://github.com/liangboceo/yuanboot/workflows/Go/badge.svg)
+![GoVersion](https://img.shields.io/github/go-mod/go-version/liangboceo/yuanboot)
+[![Report](https://goreportcard.com/badge/github.com/liangboceo/yuanboot)](https://goreportcard.com/report/github.com/liangboceo/yuanboot)
+[![Documentation](https://img.shields.io/badge/godoc-reference-blue.svg?color=24B898&logo=go&logoColor=ffffff)](https://godoc.org/github.com/liangboceo/yuanboot)
+![Contributors](https://img.shields.io/github/contributors/liangboceo/yuanboot.svg)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-# YoyoGo 特色
+# yuanboot 特色
 - 漂亮又快速的路由器 & MVC 模式 .
 - 丰富的中间件支持 (handler func & custom middleware) .
 - 微服务框架抽象了分层，在一个框架体系兼容各种server实现，如 rest,grpc等 .
@@ -22,16 +20,10 @@ YoyoGo 简单、轻量、快速、基于依赖注入的微服务框架
 
 ![framework desgin](https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/framework-desgin.jpg)
 
-QQ交流群： [780385870](https://qm.qq.com/cgi-bin/qm/qr?k=xP5ZSGZaLLgJIjK0P89gen8V-p5b1cHg&jump_from=webapi) (Go浪文学院) , 在这里感谢**贾国锦**帮忙设计的logo很漂亮。
-
-也可以加入我的公众号，通过公众号入群菜单进入微信群，主要还是在微信上活动啦。
-
-<a href="https://sourcerer.io/yoyofx"><img src="https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/20201209184239.png" width = "180px" height = "180px" alt="" align=center /></a>
-
 
 # 框架安装
 ```bash
-go get github.com/yoyofx/yoyogo
+go get github.com/liangboceo/yuanboot
 ```
 # 安装依赖 (由于某些原因国内下载不了依赖)
 ##  go version < 1.20
@@ -79,8 +71,8 @@ github.com/shima-park/agollo
 ```
 # 实现进度
 ## 标准功能
-* [X] 打印Logo和日志（YoyoGo）
-* [X] 统一程序输入参数和环境变量 (YoyoGo)
+* [X] 打印Logo和日志（yuanboot）
+* [X] 统一程序输入参数和环境变量 (yuanboot)
 * [X] 简单路由器绑定句柄功能
 * [X] HttpContext 上下文封装(请求，响应)
 * [X] 静态文件端点（静态文件服务器）
@@ -199,13 +191,13 @@ func registerEndpoints(rb router.IRouterBuilder) {
 	//swagger api document
 	endpoints.UseSwaggerDoc(rb,
 		swagger.Info{
-			Title:          "YoyoGO 框架文档演示",
+			Title:          "yuanboot 框架文档演示",
 			Version:        "v1.0.0",
-			Description:    "框架文档演示swagger文档 v1.0 [ #yoyogo](https://github.com/yoyofx/yoyogo).",
-			TermsOfService: "https://dev.yoyogo.run",
+			Description:    "框架文档演示swagger文档 v1.0 [ #yuanboot](https://github.com/liangboceo/yuanboot).",
+			TermsOfService: "https://dev.yuanboot.run",
 			Contact: swagger.Contact{
 				Email: "zl.hxd@hotmail.com",
-				Name:  "yoyogo",
+				Name:  "yuanboot",
 			},
 			License: swagger.License{
 				Name: "MIT",
@@ -313,7 +305,7 @@ func (controller UserController) GetDocumentList(request *struct {
 // Web程序的开始与停止事件
 func fireApplicationLifeEvent(life *abstractions.ApplicationLife) {
 	printDataEvent := func(event abstractions.ApplicationEvent) {
-		fmt.Printf("[yoyogo] Topic: %s; Event: %v\n", event.Topic, event.Data)
+		fmt.Printf("[yuanboot] Topic: %s; Event: %v\n", event.Topic, event.Data)
 	}
 	for {
 		select {

@@ -2,7 +2,7 @@ package xlog
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions/platform/consolecolors"
+	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
 	"log"
 	"os"
 	"time"
@@ -49,7 +49,7 @@ var LevelString = map[LogLevel]string{
 func defaultLogFormatter(log interface{}) string {
 	logInfo := log.(LogInfo)
 	outLog := fmt.Sprintf("%s [%s] [%s] [%s] [%s] , %s",
-		consolecolors.Yellow("[yoyogo]"), logInfo.StartTime, logInfo.Level, logInfo.Class, logInfo.Host, logInfo.Message)
+		consolecolors.Yellow("[yuanboot]"), logInfo.StartTime, logInfo.Level, logInfo.Class, logInfo.Host, logInfo.Message)
 	return outLog
 }
 

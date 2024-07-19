@@ -1,6 +1,6 @@
-yoyogo:
+yuanboot:
   application:
-    name: yoyogo_demo_dev
+    name: yuanboot_demo_dev
     metadata: "develop"
     server:
       type: "fasthttp"
@@ -8,7 +8,7 @@ yoyogo:
       path: "app"
       max_request_size: 209615700
       session:
-        name: "YOYOGO_SESSIONID"
+        name: "yuanboot_SESSIONID"
         timeout: 3600
       tls:
         cert: ""
@@ -72,7 +72,7 @@ yoyogo:
 #      metadata:
 #         datacenter: ""
 #         address:
-#           - "http://sd.yoyogo.run/eureka"
+#           - "http://sd.yuanboot.run/eureka"
 #         ttl: 30   # seconds
 #      type: "etcd"
 #      metadata:
@@ -104,7 +104,7 @@ yoyogo:
         env: ${USER}
       redis:
         name: reids1
-        url: m.yoyogo.run:6379
+        url: m.yuanboot.run:6379
         password: 123.com
         db: 0
 env: ${MAVEN_HOME}

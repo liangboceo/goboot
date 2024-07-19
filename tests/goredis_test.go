@@ -7,7 +7,7 @@ package tests
 //	"github.com/go-redis/redis/v8"
 //	"github.com/stretchr/testify/assert"
 //	_ "github.com/stretchr/testify/assert"
-//	cache "github.com/yoyofx/yoyogo/pkg/cache/redis"
+//	cache "github.com/liangboceo/yuanboot/pkg/cache/redis"
 //
 //	"testing"
 //	"time"
@@ -15,7 +15,7 @@ package tests
 //
 //func newClient() *redis.Client {
 //	client := redis.NewClient(&redis.Options{
-//		Addr:     "m.yoyogo.run:6379",
+//		Addr:     "m.yuanboot.run:6379",
 //		Password: "123.com",
 //		DB:       0,
 //	})
@@ -47,8 +47,8 @@ package tests
 //	defer client.Close()
 //
 //	// string
-//	client.Set(ctx, "yoyogo:version", "v1.6.1", 15*time.Minute)
-//	version, _ := client.Get(ctx, "yoyogo:version").Result()
+//	client.Set(ctx, "yuanboot:version", "v1.6.1", 15*time.Minute)
+//	version, _ := client.Get(ctx, "yuanboot:version").Result()
 //	assert.Equal(t, version, "v1.6.1")
 //
 //	// json 序列化
@@ -120,6 +120,6 @@ package tests
 //  "content": "单词*250",
 //  "editable": false
 //}]`
-//	//client.Set(ctx, "yoyogo:todolist", json, 0)
+//	//client.Set(ctx, "yuanboot:todolist", json, 0)
 //	_ = json
 //}

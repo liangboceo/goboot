@@ -1,8 +1,8 @@
 package session
 
 import (
-	"github.com/yoyofx/yoyogo/web/session/identity"
-	"github.com/yoyofx/yoyogo/web/session/store"
+	"github.com/liangboceo/yuanboot/web/session/identity"
+	"github.com/liangboceo/yuanboot/web/session/store"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

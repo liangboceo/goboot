@@ -1,12 +1,12 @@
 package session
 
 import (
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/session/identity"
-	"github.com/yoyofx/yoyogo/web/session/store"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/session/identity"
+	"github.com/liangboceo/yuanboot/web/session/store"
 )
 
-//ISessionManager session manager
+// ISessionManager session manager
 type Manager struct {
 	mMaxLifeTime int64
 	identity     identity.IProvider
@@ -23,7 +23,7 @@ type Manager struct {
 //	return mgr
 //}
 
-//NewSessionWithStore ctor for session manager , must be used to session.UseSession ,that add dependents to IOC.
+// NewSessionWithStore ctor for session manager , must be used to session.UseSession ,that add dependents to IOC.
 func NewSessionWithStore(store store.ISessionStore) context.ISessionManager {
 	mgr := &Manager{
 		store: store,
@@ -32,7 +32,7 @@ func NewSessionWithStore(store store.ISessionStore) context.ISessionManager {
 	return mgr
 }
 
-//GC clear the session list
+// GC clear the session list
 func (mgr *Manager) GC() {
 	mgr.store.GC()
 }
@@ -65,12 +65,12 @@ func (mgr *Manager) Clear(provider interface{}) {
 	id.Clear()
 }
 
-//Remove remove session store by id
+// Remove remove session store by id
 func (mgr *Manager) Remove(sessionId string) {
 	mgr.store.Remove(sessionId)
 }
 
-//SetValue set session value for the key/value
+// SetValue set session value for the key/value
 func (mgr *Manager) SetValue(sessionID string, key string, value interface{}) {
 	mgr.store.SetValue(sessionID, key, value)
 }

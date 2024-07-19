@@ -4,10 +4,10 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/pool"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/pkg/datasources"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/pool"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/pkg/datasources"
 	"sync"
 	"time"
 )
@@ -35,8 +35,8 @@ type MySqlDataSource struct {
 
 // NewMysqlDataSource 初始化MySQL数据源
 func NewMysqlDataSource(configuration abstractions.IConfiguration) *MySqlDataSource {
-	databaseConfig := configuration.GetSection("yoyogo.datasource.db")
-	poolConfig := configuration.GetSection("yoyogo.datasource.pool")
+	databaseConfig := configuration.GetSection("yuanboot.datasource.db")
+	poolConfig := configuration.GetSection("yuanboot.datasource.pool")
 	var datasourcesConfig dataSourceConfig
 	databaseConfig.Unmarshal(&datasourcesConfig)
 	poolConfig.Unmarshal(&datasourcesConfig.Pool)

@@ -2,8 +2,8 @@ package scheduler
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/utils"
 	"github.com/sirupsen/logrus"
-	"github.com/yoyofx/yoyogo/utils"
 	"os"
 	"strconv"
 )

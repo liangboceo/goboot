@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/health"
+	"github.com/liangboceo/yuanboot/abstractions/health"
 	"gorm.io/gorm"
 )
 

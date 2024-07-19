@@ -2,8 +2,8 @@ package tests
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/memory"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/strategy"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/memory"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/strategy"
 	"testing"
 )
 

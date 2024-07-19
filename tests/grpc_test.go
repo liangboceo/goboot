@@ -3,10 +3,10 @@ package tests
 import (
 	"context"
 	"fmt"
+	"github.com/liangboceo/yuanboot/grpc/conn"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/memory"
+	proto "github.com/liangboceo/yuanboot/tests/proto"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/grpc/conn"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/memory"
-	proto "github.com/yoyofx/yoyogo/tests/proto"
 	"google.golang.org/grpc"
 	"net"
 	"sync"
@@ -33,7 +33,7 @@ func TestGrpcFactory(t *testing.T) {
 	cache := &memory.MemoryCache{Services: []string{"localhost"}, Port: 25003}
 
 	gfc := conn.NewFactory(cache)
-	clientConn, err := gfc.CreateClientConn("grpc://public/[yoyogo_grpc_dev]")
+	clientConn, err := gfc.CreateClientConn("grpc://public/[yuanboot_grpc_dev]")
 
 	c := proto.NewGreeterClient(clientConn)
 

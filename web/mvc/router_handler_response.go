@@ -1,8 +1,8 @@
 package mvc
 
 import (
-	"github.com/yoyofx/yoyogo/web/actionresult"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/web/actionresult"
+	"github.com/liangboceo/yuanboot/web/context"
 	"strings"
 )
 

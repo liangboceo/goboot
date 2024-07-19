@@ -1,6 +1,6 @@
 package abstractions
 
-import "github.com/yoyofx/yoyogo/abstractions/hostenv"
+import "github.com/liangboceo/yuanboot/abstractions/hostenv"
 
 type HostEnvironment struct {
 	ApplicationName string

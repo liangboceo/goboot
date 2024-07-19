@@ -2,11 +2,10 @@ package abstractions
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo"
-	"github.com/yoyofx/yoyogo/abstractions/platform/consolecolors"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/utils"
+	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/utils"
 	"strconv"
 )
 
@@ -114,19 +113,19 @@ func hostEnding(log xlog.ILogger, context *HostBuilderContext) {
 }
 
 func PrintLogo(l xlog.ILogger, env *HostEnvironment) {
-	//logo, _ := base64.StdEncoding.DecodeString(yoyogo.Logo)
-	logo := yoyogo.Logo
+	//logo, _ := base64.StdEncoding.DecodeString(yuanboot.Logo)
+	logo := yuanboot.Logo
 	fmt.Println(consolecolors.Blue(string(logo)))
 	fmt.Println(" ")
-	fmt.Printf("%s   (version:  %s)", consolecolors.Green(":: YoyoGo ::"), consolecolors.Blue(env.Version))
+	fmt.Printf("%s   (version:  %s)", consolecolors.Green(":: yuanboot ::"), consolecolors.Blue(env.Version))
 
 	fmt.Print(consolecolors.Blue(`
 light and fast , dependency injection based micro-service framework written in Go.
 `))
 
 	fmt.Println(" ")
-	l.Info(consolecolors.Green("Welcome to YoyoGo, starting application ..."))
-	l.Info("yoyogo framework version :  %s", consolecolors.Blue(env.Version))
+	l.Info(consolecolors.Green("Welcome to yuanboot, starting application ..."))
+	l.Info("yuanboot framework version :  %s", consolecolors.Blue(env.Version))
 	l.Info("server & protocol        :  %s", consolecolors.Green(env.Server))
 	l.Info("machine host ip          :  %s", consolecolors.Blue(env.Host))
 	l.Info("listening on port        :  %s", consolecolors.Blue(env.Port))

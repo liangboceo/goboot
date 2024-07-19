@@ -1,7 +1,7 @@
 package apollo
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions"
 )
 
 func AddRemoteWithApollo(builder *abstractions.ConfigurationBuilder) *abstractions.ConfigurationBuilder {

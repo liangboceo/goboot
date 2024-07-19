@@ -2,7 +2,7 @@ package memory
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 )
 
 type Watcher struct {

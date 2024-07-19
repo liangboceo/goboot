@@ -1,8 +1,8 @@
-// Copyright 2017 gf Author(https://github.com/yoyofx/yoyogo). All Rights Reserved.
+// Copyright 2017 gf Author(https://github.com/liangboceo/yuanboot). All Rights Reserved.
 //
 // This Source Code Form is subject to the terms of the MIT License.
 // If a copy of the MIT was not distributed with this file,
-// You can obtain one at https://github.com/yoyofx/yoyogo.
+// You can obtain one at https://github.com/liangboceo/yuanboot.
 
 // Package email provides a simple SMTP client to access remote mail server.
 //
@@ -14,7 +14,7 @@ package email
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/yoyofx/yoyogo/utils/typeconverter"
+	"github.com/liangboceo/yuanboot/utils/typeconverter"
 	"net/smtp"
 	"strings"
 )

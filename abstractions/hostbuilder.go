@@ -2,8 +2,7 @@ package abstractions
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo"
-	"github.com/yoyofx/yoyogo/abstractions/hostenv"
+	"github.com/liangboceo/yuanboot/abstractions/hostenv"
 	"github.com/yoyofxteam/dependencyinjection"
 	"net"
 	"os"
@@ -45,7 +44,7 @@ func (host *HostBuilder) Configure(configure interface{}) *HostBuilder {
 func (host *HostBuilder) UseConfiguration(configuration IConfiguration) *HostBuilder {
 	host.Context.Configuration = configuration
 	host.Context.HostingEnvironment.Profile = configuration.GetProfile()
-	section := host.Context.Configuration.GetSection("yoyogo.application")
+	section := host.Context.Configuration.GetSection("yuanboot.application")
 	if section != nil {
 		config := &hostenv.HostConfig{}
 		section.Unmarshal(config)
@@ -105,16 +104,16 @@ func RunningHostEnvironmentSetting(hostEnv *HostEnvironment) {
 	hostEnv.PID = os.Getpid()
 }
 
-//buildingHostEnvironmentSetting  build each configuration by init , such as file or hostenv or args ...
+// buildingHostEnvironmentSetting  build each configuration by init , such as file or hostenv or args ...
 func buildingHostEnvironmentSetting(serviceCollection *dependencyinjection.ServiceCollection, context *HostBuilderContext) {
 	hostEnv := context.HostingEnvironment
-	hostEnv.Version = yoyogo.Version
+	hostEnv.Version = yuanboot.Version
 	hostEnv.Addr = DetectAddress("")
 	if context.Configuration != nil {
 		hostEnv.MetaData = make(map[string]string)
 		hostEnv.MetaData["config.path"] = context.Configuration.GetConfDir()
-		hostEnv.MetaData["server.path"] = context.Configuration.GetString("yoyogo.application.server.path")
-		mvc_template := context.Configuration.GetString("yoyogo.application.server.mvc.template")
+		hostEnv.MetaData["server.path"] = context.Configuration.GetString("yuanboot.application.server.path")
+		mvc_template := context.Configuration.GetString("yuanboot.application.server.mvc.template")
 		if mvc_template != "" {
 			hostEnv.MetaData["mvc.template"] = mvc_template
 		}

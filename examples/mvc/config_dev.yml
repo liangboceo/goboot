@@ -1,6 +1,6 @@
-yoyogo:
+yuanboot:
   application:
-    name: yoyogo_demo_dev
+    name: yuanboot_demo_dev
     metadata: "develop"
     server:
       type: "fasthttp"
@@ -8,7 +8,7 @@ yoyogo:
       path: "app"
       max_request_size: 2096157
       session:
-        name: "YOYOGO_SESSIONID"
+        name: "yuanboot_SESSIONID"
         timeout: 3600
       tls:
         cert: ""

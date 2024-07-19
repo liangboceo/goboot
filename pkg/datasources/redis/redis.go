@@ -3,11 +3,11 @@ package redis
 import (
 	"errors"
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/pool"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/pkg/cache/redis"
-	"github.com/yoyofx/yoyogo/pkg/datasources"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/pool"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/pkg/cache/redis"
+	"github.com/liangboceo/yuanboot/pkg/datasources"
 	"sync"
 	"time"
 )
@@ -46,8 +46,8 @@ func NewRedisClient(source *RedisDataSource) redis.IClient {
 
 // NewMysqlDataSource 初始化MySQL数据源
 func NewRedis(configuration abstractions.IConfiguration) *RedisDataSource {
-	redisConfigSection := configuration.GetSection("yoyogo.datasource.redis")
-	poolConfig := configuration.GetSection("yoyogo.datasource.pool")
+	redisConfigSection := configuration.GetSection("yuanboot.datasource.redis")
+	poolConfig := configuration.GetSection("yuanboot.datasource.pool")
 	var redisdatasourcesConfig redisConfig
 	redisConfigSection.Unmarshal(&redisdatasourcesConfig)
 	poolConfig.Unmarshal(&redisdatasourcesConfig.Pool)

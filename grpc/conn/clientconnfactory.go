@@ -3,7 +3,7 @@ package conn
 import (
 	"context"
 	"errors"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/resolver"
 	"strconv"

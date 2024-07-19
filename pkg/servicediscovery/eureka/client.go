@@ -3,7 +3,7 @@ package eureka
 import (
 	"fmt"
 	"github.com/hudl/fargo"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
 	"net/http"
 	"sync"
 	"time"

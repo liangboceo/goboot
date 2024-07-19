@@ -1,7 +1,7 @@
 package health
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/platform/systeminfo"
+	"github.com/liangboceo/yuanboot/abstractions/platform/systeminfo"
 	"os"
 )
 

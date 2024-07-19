@@ -1,6 +1,6 @@
-# exec root dir by yoyogo
+# exec root dir by yuanboot
 
-docker build -t ccr.ccs.tencentyun.com/tsf_86509022/yoyogo_demo:dev-45 -f ./examples/simpleweb/Dockerfile .
+docker build -t ccr.ccs.tencentyun.com/tsf_86509022/yuanboot_demo:dev-45 -f ./examples/simpleweb/Dockerfile .
 
 
-docker push ccr.ccs.tencentyun.com/tsf_86509022/yoyogo_demo:dev-45
+docker push ccr.ccs.tencentyun.com/tsf_86509022/yuanboot_demo:dev-45

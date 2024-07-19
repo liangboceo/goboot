@@ -1,8 +1,8 @@
 package abstractions
 
 import (
+	"github.com/liangboceo/yuanboot/abstractions/hostenv"
 	"github.com/spf13/viper"
-	"github.com/yoyofx/yoyogo/abstractions/hostenv"
 )
 
 type ConfigurationContext struct {

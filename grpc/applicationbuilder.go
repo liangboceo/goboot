@@ -2,8 +2,8 @@ package grpc
 
 import (
 	grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/grpc/interceptors"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/grpc/interceptors"
 	"google.golang.org/grpc"
 )
 
@@ -66,7 +66,7 @@ func (builder *ApplicationBuilder) SetHostBuildContext(context *abstractions.Hos
 	}
 }
 
-//  this time is not build host.context.HostServices , that add services define
+// this time is not build host.context.HostServices , that add services define
 func (builder *ApplicationBuilder) innerConfigures() {
 	builder.hostBuilderContext.
 		ApplicationServicesDef.

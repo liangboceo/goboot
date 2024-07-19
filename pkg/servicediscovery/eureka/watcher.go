@@ -3,8 +3,8 @@ package eureka
 import (
 	"errors"
 	"github.com/hudl/fargo"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
 	"strings"
 	"time"
 )

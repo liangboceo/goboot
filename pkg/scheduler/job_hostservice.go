@@ -4,11 +4,11 @@ import (
 	"bufio"
 	"context"
 	"fmt"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/hosting"
+	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
+	"github.com/liangboceo/yuanboot/utils"
 	"github.com/xxl-job/xxl-job-executor-go"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/hosting"
-	"github.com/yoyofx/yoyogo/abstractions/platform/consolecolors"
-	"github.com/yoyofx/yoyogo/utils"
 	"github.com/yoyofxteam/dependencyinjection"
 	"strings"
 )
@@ -34,7 +34,7 @@ type XxlJobService struct {
 }
 
 func NewXxlJobService(configuration abstractions.IConfiguration, environment *abstractions.HostEnvironment, jobList []JobHandler) *XxlJobService {
-	xxlSection := configuration.GetSection("yoyogo.application.xxl")
+	xxlSection := configuration.GetSection("yuanboot.application.xxl")
 	var ops *ExecutorOptions
 	xxlSection.Unmarshal(&ops)
 	ops.RegistryKey = environment.ApplicationName

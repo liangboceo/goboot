@@ -1,7 +1,7 @@
 package strategy
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"math/rand"
 	"time"
 )

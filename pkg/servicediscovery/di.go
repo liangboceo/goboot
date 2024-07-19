@@ -1,9 +1,9 @@
 package servicediscovery
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	grpconn "github.com/yoyofx/yoyogo/grpc/conn"
-	"github.com/yoyofx/yoyogo/pkg/httpclient"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	grpconn "github.com/liangboceo/yuanboot/grpc/conn"
+	"github.com/liangboceo/yuanboot/pkg/httpclient"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

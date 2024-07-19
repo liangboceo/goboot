@@ -2,15 +2,15 @@ package nacos
 
 import (
 	"errors"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	sd "github.com/liangboceo/yuanboot/pkg/servicediscovery"
 	"github.com/nacos-group/nacos-sdk-go/clients"
 	"github.com/nacos-group/nacos-sdk-go/clients/naming_client"
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	"github.com/nacos-group/nacos-sdk-go/model"
 	"github.com/nacos-group/nacos-sdk-go/vo"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	sd "github.com/yoyofx/yoyogo/pkg/servicediscovery"
 	"strings"
 )
 
@@ -22,13 +22,13 @@ type Registrar struct {
 }
 
 func NewServerDiscoveryWithDI(configuration abstractions.IConfiguration, env *abstractions.HostEnvironment) servicediscovery.IServiceDiscovery {
-	sdType, ok := configuration.Get("yoyogo.cloud.discovery.type").(string)
+	sdType, ok := configuration.Get("yuanboot.cloud.discovery.type").(string)
 	if !ok || sdType != "nacos" {
-		panic(errors.New("yoyogo.cloud.discovery.type is not config node"))
+		panic(errors.New("yuanboot.cloud.discovery.type is not config node"))
 	}
-	section := configuration.GetSection("yoyogo.cloud.discovery.metadata")
+	section := configuration.GetSection("yuanboot.cloud.discovery.metadata")
 	if section == nil {
-		panic(errors.New("yoyogo.cloud.discovery.metadata is not config node"))
+		panic(errors.New("yuanboot.cloud.discovery.metadata is not config node"))
 	}
 	option := &Config{}
 	section.Unmarshal(&option)

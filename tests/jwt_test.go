@@ -2,8 +2,8 @@ package tests
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/utils/jwt"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/utils/jwt"
 	"testing"
 	"time"
 )

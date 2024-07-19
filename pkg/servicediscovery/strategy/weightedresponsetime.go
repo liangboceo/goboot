@@ -5,7 +5,7 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"log"
 	"net"
 	"sort"
@@ -88,7 +88,7 @@ func (w *WeightedResponseTime) Next(instanceList []servicediscovery.ServiceInsta
 	return serviceDurationSlice[0].service, errorMsg
 }
 
-//定义ICMP协议结构体
+// 定义ICMP协议结构体
 type ICMP struct {
 	Type        uint8
 	Code        uint8

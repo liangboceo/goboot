@@ -2,11 +2,11 @@ package tests
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/pkg/httpclient"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/memory"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/strategy"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/pkg/httpclient"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/memory"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/strategy"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"

@@ -1,8 +1,8 @@
 package console
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/platform/exithooksignals"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/platform/exithooksignals"
 )
 
 type Host struct {

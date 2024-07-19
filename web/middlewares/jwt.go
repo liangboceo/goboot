@@ -1,10 +1,10 @@
 package middlewares
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/utils"
-	"github.com/yoyofx/yoyogo/utils/jwt"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/utils"
+	"github.com/liangboceo/yuanboot/utils/jwt"
+	"github.com/liangboceo/yuanboot/web/context"
 	"net/http"
 )
 
@@ -30,11 +30,11 @@ func NewJwt() *JwtMiddleware {
 func (jwtmdw *JwtMiddleware) SetConfiguration(config abstractions.IConfiguration) {
 	var hasEnable, hasSecret, hasPrefix, hasHeader bool
 	if config != nil {
-		jwtmdw.Enable, hasEnable = config.Get("yoyogo.application.server.jwt.enable").(bool)
-		jwtmdw.SecretKey, hasSecret = config.Get("yoyogo.application.server.jwt.secret").(string)
-		jwtmdw.Prefix, hasPrefix = config.Get("yoyogo.application.server.jwt.prefix").(string)
-		jwtmdw.Header, hasHeader = config.Get("yoyogo.application.server.jwt.header").(string)
-		jwtmdw.SkipPath, _ = config.Get("yoyogo.application.server.jwt.skip_path").([]interface{})
+		jwtmdw.Enable, hasEnable = config.Get("yuanboot.application.server.jwt.enable").(bool)
+		jwtmdw.SecretKey, hasSecret = config.Get("yuanboot.application.server.jwt.secret").(string)
+		jwtmdw.Prefix, hasPrefix = config.Get("yuanboot.application.server.jwt.prefix").(string)
+		jwtmdw.Header, hasHeader = config.Get("yuanboot.application.server.jwt.header").(string)
+		jwtmdw.SkipPath, _ = config.Get("yuanboot.application.server.jwt.skip_path").([]interface{})
 	}
 
 	if !hasEnable {

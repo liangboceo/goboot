@@ -2,7 +2,7 @@
 osArray=("linux" "darwin" "freebsd" "windows")
 archs=("amd64")
 version=${1-"0.0.1-preview1"}
-out_file="yygctl"
+out_file="yuanbootctl"
 
 build() {
   os=$1
@@ -18,7 +18,7 @@ build() {
 }
 
 main() {
-  cd cli/yygctl
+  cd cli/yuanbootctl
   ls
   echo "mod download"
   go get -t .

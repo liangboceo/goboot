@@ -1,11 +1,11 @@
 package endpoints
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/utils/jwt"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/middlewares"
-	"github.com/yoyofx/yoyogo/web/router"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/utils/jwt"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/middlewares"
+	"github.com/liangboceo/yuanboot/web/router"
 	"strconv"
 	"time"
 )
@@ -17,8 +17,8 @@ func UseJwt(router router.IRouterBuilder) {
 	var expires int64
 	var hasSecret, hasExpires bool
 	if config != nil {
-		secretKey, hasSecret = config.Get("yoyogo.application.server.jwt.secret").(string)
-		expires, hasExpires = config.Get("yoyogo.application.server.jwt.expires").(int64)
+		secretKey, hasSecret = config.Get("yuanboot.application.server.jwt.secret").(string)
+		expires, hasExpires = config.Get("yuanboot.application.server.jwt.expires").(int64)
 	}
 	if !hasSecret {
 		secretKey = "12391JdeOW^%$#@"

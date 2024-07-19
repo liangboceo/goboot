@@ -1,8 +1,8 @@
 package web
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/hostenv"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/hostenv"
 	"golang.org/x/net/context"
 	"log"
 	"net/http"

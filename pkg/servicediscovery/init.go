@@ -1,9 +1,9 @@
 package servicediscovery
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
-	"github.com/yoyofx/yoyogo/pkg/servicediscovery/strategy"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/pkg/servicediscovery/strategy"
 	"github.com/yoyofxteam/dependencyinjection"
 	"strconv"
 	"time"
@@ -12,7 +12,7 @@ import (
 func init() {
 	abstractions.RegisterConfigurationProcessor(
 		func(config abstractions.IConfiguration, serviceCollection *dependencyinjection.ServiceCollection) {
-			ttl, _ := config.Get("yoyogo.cloud.discovery.cache.ttl").(int64)
+			ttl, _ := config.Get("yuanboot.cloud.discovery.cache.ttl").(int64)
 			ttlDuration := servicediscovery.DefaultTTL // 30 * seconds
 			if ttl > 0 {
 				ttlDuration = time.Duration(ttl) * time.Second
@@ -22,7 +22,7 @@ func init() {
 			})
 
 			// selector (LB) Strategy
-			sdStrategy := config.GetString("yoyogo.cloud.discovery.strategy")
+			sdStrategy := config.GetString("yuanboot.cloud.discovery.strategy")
 			// round-robin  , weight-time ,  random
 			switch sdStrategy {
 			case "random":
@@ -33,7 +33,7 @@ func init() {
 				serviceCollection.AddSingletonByImplements(strategy.NewRound, new(servicediscovery.Strategy))
 			}
 
-			sdRegEnableStr := config.GetString("yoyogo.cloud.discovery.register-enable")
+			sdRegEnableStr := config.GetString("yuanboot.cloud.discovery.register-enable")
 			sdRegEnable := true
 			if sdRegEnableStr != "" {
 				sdRegEnable, _ = strconv.ParseBool(sdRegEnableStr)

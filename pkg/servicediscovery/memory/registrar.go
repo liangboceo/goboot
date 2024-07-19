@@ -2,7 +2,7 @@ package memory
 
 import (
 	"github.com/google/uuid"
-	"github.com/yoyofx/yoyogo/abstractions/servicediscovery"
+	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 )
 
 type Registrar struct {

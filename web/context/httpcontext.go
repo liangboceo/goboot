@@ -2,9 +2,9 @@ package context
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/utils/cast"
-	"github.com/yoyofx/yoyogo/web/actionresult"
-	"github.com/yoyofx/yoyogo/web/binding"
+	"github.com/liangboceo/yuanboot/utils/cast"
+	"github.com/liangboceo/yuanboot/web/actionresult"
+	"github.com/liangboceo/yuanboot/web/binding"
 	"github.com/yoyofxteam/dependencyinjection"
 	"net/http"
 	"sync"
@@ -50,7 +50,7 @@ func (ctx *HttpContext) init(w http.ResponseWriter, r *http.Request, maxRequestS
 	binding.SetRequestMaxMemory(maxRequestSizeMemory)
 }
 
-//SetItem Set data in context.
+// SetItem Set data in context.
 func (ctx *HttpContext) SetItem(key string, val interface{}) {
 	ctx.storeMutex.Lock()
 	if ctx.store == nil {
@@ -90,7 +90,7 @@ func (ctx *HttpContext) Bind(i interface{}) (err error) {
 	return err
 }
 
-//BindWithUri is a special bind
+// BindWithUri is a special bind
 func (ctx *HttpContext) BindWithUri(i interface{}) (err error) {
 	err = binding.Uri.BindUri(ctx.Input.QueryStrings(), i)
 	return err

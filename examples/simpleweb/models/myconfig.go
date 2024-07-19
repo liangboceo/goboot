@@ -10,5 +10,5 @@ type MyConfig struct {
 }
 
 func (config MyConfig) GetSection() string {
-	return "yoyogo.datasource.db"
+	return "yuanboot.datasource.db"
 }

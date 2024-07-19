@@ -1,7 +1,7 @@
 package abstractions
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions/hostenv"
+	"github.com/liangboceo/yuanboot/abstractions/hostenv"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

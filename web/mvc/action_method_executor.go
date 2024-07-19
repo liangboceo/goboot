@@ -2,8 +2,8 @@ package mvc
 
 import (
 	"errors"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
 	"github.com/yoyofxteam/reflectx"
 	"reflect"
 )

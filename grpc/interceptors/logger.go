@@ -3,8 +3,8 @@ package interceptors
 import (
 	"context"
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/grpc/interceptors/models"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/grpc/interceptors/models"
 	"google.golang.org/grpc"
 	"strconv"
 	"strings"

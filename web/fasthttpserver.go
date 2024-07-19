@@ -1,9 +1,9 @@
 package web
 
 import (
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/hostenv"
 	"github.com/valyala/fasthttp"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/hostenv"
 	"log"
 	"net/http"
 )

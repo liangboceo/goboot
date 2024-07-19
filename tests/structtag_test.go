@@ -2,7 +2,7 @@ package tests
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/web/context"
 	"reflect"
 	"testing"
 )

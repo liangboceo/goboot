@@ -2,9 +2,9 @@ package middlewares
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions/platform/consolecolors"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
 	"html/template"
 	"net/http"
 	"net/url"
@@ -107,7 +107,7 @@ func NewLogger() *Logger {
 
 func (l *Logger) Inovke(ctx *context.HttpContext, next func(ctx *context.HttpContext)) {
 	enEscapeUrl, _ := url.QueryUnescape(ctx.Input.Request.URL.RequestURI())
-	l.ALogger.Info(fmt.Sprintf("[yoyogo] Method: %s Url: %s  Content-Type: %s , Accept: %s",
+	l.ALogger.Info(fmt.Sprintf("[yuanboot] Method: %s Url: %s  Content-Type: %s , Accept: %s",
 		ctx.Input.Method(), enEscapeUrl,
 		ctx.Input.Header(context.HeaderContentType),
 		ctx.Input.Header(context.HeaderAccept)))
@@ -137,7 +137,7 @@ func (l *Logger) Inovke(ctx *context.HttpContext, next func(ctx *context.HttpCon
 	statusColor := logInfo.StatusCodeColor()
 	methodColor := logInfo.MethodColor()
 	resetColor := logInfo.ResetColor()
-	outLog := fmt.Sprintf(consolecolors.Yellow("[yoyogo] ")+"%v |%s %3d %s| %7v ms| %15s |%s %5s %s %s "+bodyFormat,
+	outLog := fmt.Sprintf(consolecolors.Yellow("[yuanboot] ")+"%v |%s %3d %s| %7v ms| %15s |%s %5s %s %s "+bodyFormat,
 		logInfo.StartTime,
 		statusColor, logInfo.Status, resetColor,
 		logInfo.Duration,

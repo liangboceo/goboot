@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/web"
-	"github.com/yoyofx/yoyogo/web/endpoints"
-	"github.com/yoyofx/yoyogo/web/router"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/web"
+	"github.com/liangboceo/yuanboot/web/endpoints"
+	"github.com/liangboceo/yuanboot/web/router"
 )
 
 func main() {

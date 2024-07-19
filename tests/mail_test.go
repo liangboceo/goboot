@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"github.com/yoyofx/yoyogo/pkg/email"
+	"github.com/liangboceo/yuanboot/pkg/email"
 	"strings"
 	"testing"
 )

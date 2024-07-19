@@ -1,8 +1,8 @@
 package store
 
 import (
-	"github.com/yoyofx/yoyogo/pkg/cache/redis"
-	redisdb "github.com/yoyofx/yoyogo/pkg/datasources/redis"
+	"github.com/liangboceo/yuanboot/pkg/cache/redis"
+	redisdb "github.com/liangboceo/yuanboot/pkg/datasources/redis"
 	"time"
 )
 

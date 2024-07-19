@@ -2,9 +2,9 @@ package middlewares
 
 import (
 	"fmt"
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/xlog"
-	"github.com/yoyofx/yoyogo/web/context"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/xlog"
+	"github.com/liangboceo/yuanboot/web/context"
 	"html/template"
 	"net/http"
 	"runtime"
@@ -48,7 +48,7 @@ h1 {
 }
 </style>
 <body>
-<h1>yoyogo - PANIC</h1>
+<h1>yuanboot - PANIC</h1>
 
 <div class="panic-interface block">
 	<h3>{{.RequestDescription}}</h3>

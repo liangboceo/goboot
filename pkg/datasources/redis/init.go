@@ -1,9 +1,9 @@
 package redis
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/abstractions/health"
-	"github.com/yoyofx/yoyogo/pkg/cache/redis"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/abstractions/health"
+	"github.com/liangboceo/yuanboot/pkg/cache/redis"
 	"github.com/yoyofxteam/dependencyinjection"
 )
 

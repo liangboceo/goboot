@@ -3,7 +3,7 @@ package identity
 import (
 	"crypto/rand"
 	"encoding/base64"
-	webhttp "github.com/yoyofx/yoyogo/web/context"
+	webhttp "github.com/liangboceo/yuanboot/web/context"
 	"io"
 	"net/http"
 	"strconv"
@@ -19,31 +19,31 @@ type Cookie struct {
 
 var defaultLifeTime int64 = 3600
 
-//NewCookie new cookie provider
+// NewCookie new cookie provider
 func NewCookie() *Cookie {
 	return &Cookie{
-		sessionCookieName: "YOYOGO_SESSIONID",
+		sessionCookieName: "yuanboot_SESSIONID",
 		httpContext:       nil,
 		mMaxLifeTime:      defaultLifeTime,
 	}
 }
 
-//SetContext set http context
+// SetContext set http context
 func (c *Cookie) SetContext(cxt interface{}) {
 	c.httpContext = cxt.(*webhttp.HttpContext)
 }
 
-//SetName Set cookie name
+// SetName Set cookie name
 func (c *Cookie) SetName(name string) {
 	c.sessionCookieName = name
 }
 
-//SetMaxLifeTime set life time
+// SetMaxLifeTime set life time
 func (c *Cookie) SetMaxLifeTime(liftTime int64) {
 	c.mMaxLifeTime = liftTime
 }
 
-//SetID set session id
+// SetID set session id
 func (c Cookie) SetID(sessionId string) {
 	cookie := &http.Cookie{Name: c.sessionCookieName, Value: sessionId, Path: "/", HttpOnly: true, MaxAge: int(c.mMaxLifeTime)}
 	http.SetCookie(c.httpContext.Output.Response, cookie)

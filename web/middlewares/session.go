@@ -1,11 +1,11 @@
 package middlewares
 
 import (
-	"github.com/yoyofx/yoyogo/abstractions"
-	"github.com/yoyofx/yoyogo/web/context"
-	"github.com/yoyofx/yoyogo/web/session"
-	"github.com/yoyofx/yoyogo/web/session/identity"
-	"github.com/yoyofx/yoyogo/web/session/store"
+	"github.com/liangboceo/yuanboot/abstractions"
+	"github.com/liangboceo/yuanboot/web/context"
+	"github.com/liangboceo/yuanboot/web/session"
+	"github.com/liangboceo/yuanboot/web/session/identity"
+	"github.com/liangboceo/yuanboot/web/session/store"
 	"sync"
 )
 
@@ -26,7 +26,7 @@ type SessionConfig struct {
 
 func NewSessionWith(provider identity.IProvider, store store.ISessionStore, config abstractions.IConfiguration) *SessionMiddleware {
 	var sessionConfig *SessionConfig
-	config.GetSection("yoyogo.application.server.session").Unmarshal(&sessionConfig)
+	config.GetSection("yuanboot.application.server.session").Unmarshal(&sessionConfig)
 	if sessionConfig.TimeOut == 0 {
 		sessionConfig.TimeOut = 3600
 	}

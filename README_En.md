@@ -1,12 +1,12 @@
-# YoyoGo [中文介绍](https://github.com/yoyofx/yoyogo/blob/master/README-ZHCN.md "中文介绍")
-YoyoGo is a simple, light and fast Web framework written in Go. 
+# yuanboot [中文介绍](https://github.com/liangboceo/yuanboot/blob/master/README-ZHCN.md "中文介绍")
+yuanboot is a simple, light and fast Web framework written in Go. 
 
-![Release](https://img.shields.io/github/v/tag/yoyofx/yoyogo.svg?color=24B898&label=release&logo=github&sort=semver)
-![Go](https://github.com/yoyofx/yoyogo/workflows/Go/badge.svg)
-![GoVersion](https://img.shields.io/github/go-mod/go-version/yoyofx/yoyogo)
-[![Report](https://goreportcard.com/badge/github.com/yoyofx/yoyogo)](https://goreportcard.com/report/github.com/yoyofx/yoyogo)
-[![Documentation](https://img.shields.io/badge/godoc-reference-blue.svg?color=24B898&logo=go&logoColor=ffffff)](https://godoc.org/github.com/yoyofx/yoyogo)
-![Contributors](https://img.shields.io/github/contributors/yoyofx/yoyogo.svg)
+![Release](https://img.shields.io/github/v/tag/liangboceo/yuanboot.svg?color=24B898&label=release&logo=github&sort=semver)
+![Go](https://github.com/liangboceo/yuanboot/workflows/Go/badge.svg)
+![GoVersion](https://img.shields.io/github/go-mod/go-version/liangboceo/yuanboot)
+[![Report](https://goreportcard.com/badge/github.com/liangboceo/yuanboot)](https://goreportcard.com/report/github.com/liangboceo/yuanboot)
+[![Documentation](https://img.shields.io/badge/godoc-reference-blue.svg?color=24B898&logo=go&logoColor=ffffff)](https://godoc.org/github.com/liangboceo/yuanboot)
+![Contributors](https://img.shields.io/github/contributors/liangboceo/yuanboot.svg)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 # Features
@@ -17,7 +17,7 @@ YoyoGo is a simple, light and fast Web framework written in Go.
 - Inspired by many excellent Go Web framework
 
 # Installation
-`go get github.com/yoyofx/yoyogo`
+`go get github.com/liangboceo/yuanboot`
 
 # Simple Example
 ```golang
@@ -36,8 +36,8 @@ func main() {
 
 # ToDo
 ## Standard
-* [X] Print Logo (YoyoGo)
-* [X] Unified program entry (YoyoGo)
+* [X] Print Logo (yuanboot)
+* [X] Unified program entry (yuanboot)
 * [X] Simple router binded handle func
 * [X] HttpContext (request,response)
 * [X] Static File EndPoint（Static File Server）
@@ -195,7 +195,7 @@ func PostInfo(ctx *context.HttpContext) {
 
 func fireApplicationLifeEvent(life *abstractions.ApplicationLife) {
 	printDataEvent := func(event abstractions.ApplicationEvent) {
-		fmt.Printf("[yoyogo] Topic: %s; Event: %v\n", event.Topic, event.Data)
+		fmt.Printf("[yuanboot] Topic: %s; Event: %v\n", event.Topic, event.Data)
 	}
 	for {
 		select {
