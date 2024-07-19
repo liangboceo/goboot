@@ -1,4 +1,4 @@
-module yuanbootctl
+module github.com/liangboceo/yuanboot/cli/yuanbootctl
 
 go 1.18
 
