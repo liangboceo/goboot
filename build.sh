@@ -1,4 +1,4 @@
-#!/usr/bin/Env bash
+#!/usr/bin/env bash
 osArray=("linux" "darwin" "freebsd" "windows")
 archs=("amd64" "386")
 version=${1-"0.0.1-preview1"}
@@ -25,9 +25,6 @@ main() {
   go mod download
   for os in "${osArray[@]}"; do
     for arch in "${archs[@]}"; do
-      if [ ${os} = 'darwin' ] && [ ${arch} = '386' ]; then
-          continue
-      fi
       build "${os}" "${arch}"
     done
   done
