@@ -25,7 +25,7 @@ main() {
   go mod download
   for os in "${osArray[@]}"; do
     for arch in "${archs[@]}"; do
-      if [ os=='darwin' && arch=='386' ]; then
+      if [ os=='darwin' ] && [ arch=='386' ]; then
           continue
       fi
       build "${os}" "${arch}"
