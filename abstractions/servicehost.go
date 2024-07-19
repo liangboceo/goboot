@@ -2,6 +2,7 @@ package abstractions
 
 import (
 	"fmt"
+	"github.com/liangboceo/yuanboot"
 	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
 	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"github.com/liangboceo/yuanboot/abstractions/xlog"
