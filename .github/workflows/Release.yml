@@ -110,15 +110,15 @@ jobs:
         asset_name: yuanbootctl_${{ github.event.inputs.version }}_linux_amd64.tar.gz
         asset_content_type: application/octet-stream
 
-    - name: Upload a Release Asset
-      uses: actions/upload-release-asset@v1.0.2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: yuanbootctl_${{ github.event.inputs.version }}_windows_386.tar.gz
-        asset_name: yuanbootctl_${{ github.event.inputs.version }}_windows_386.tar.gz
-        asset_content_type: application/octet-stream
+#    - name: Upload a Release Asset
+#      uses: actions/upload-release-asset@v1.0.2
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      with:
+#        upload_url: ${{ steps.create_release.outputs.upload_url }}
+#        asset_path: yuanbootctl_${{ github.event.inputs.version }}_windows_386.tar.gz
+#        asset_name: yuanbootctl_${{ github.event.inputs.version }}_windows_386.tar.gz
+#        asset_content_type: application/octet-stream
 
     - name: Upload a Release Asset
       uses: actions/upload-release-asset@v1.0.2
