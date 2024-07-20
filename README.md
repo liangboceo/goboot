@@ -56,7 +56,7 @@ func main() {
     }).Build().Run()       //默认端口号 :8080
 }
 ```
-![](https://mnur-prod-public.oss-cn-beijing.aliyuncs.com/0/tech/20201209182340.png)
+
 
 ## 依赖框架模块
 只涉及框架使用或贡献过的库
