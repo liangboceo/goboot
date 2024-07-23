@@ -143,6 +143,7 @@ github.com/shima-park/agollo
 package main
 
 import
+import "github.com/liangboceo/dependencyinjection"
 ...
 
 func main() {
@@ -187,7 +188,7 @@ func registerEndpoints(rb router.IRouterBuilder) {
 	Endpoints.UsePrometheus(rb)
 	Endpoints.UsePprof(rb)
 	Endpoints.UseJwt(rb)
-	
+
 	//swagger api document
 	endpoints.UseSwaggerDoc(rb,
 		swagger.Info{
@@ -266,9 +267,9 @@ func NewUserController(userAction models.IUserAction) *UserController {
 // 请求对象的参数化绑定 , 使用 doc属性标注 支持swagger文档
 type RegisterRequest struct {
 	mvc.RequestBody `route:"/api/users/register" doc:"用户注册"`
-	UserName   string `uri:"userName" doc:"用户名"`
-	Password   string `uri:"password" doc:"密码"`
-	TestNumber uint64 `uri:"num" doc:"数字"`
+	UserName        string `uri:"userName" doc:"用户名"`
+	Password        string `uri:"password" doc:"密码"`
+	TestNumber      uint64 `uri:"num" doc:"数字"`
 }
 
 // Register函数自动绑定参数
@@ -300,7 +301,6 @@ func (controller UserController) GetDocumentList(request *struct {
 		{Id: 5, Name: "test5", Time: time.Now()}, {Id: 6, Name: "test6", Time: time.Now()},
 	}, Success: true}
 }
-
 
 // Web程序的开始与停止事件
 func fireApplicationLifeEvent(life *abstractions.ApplicationLife) {

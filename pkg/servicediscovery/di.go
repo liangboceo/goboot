@@ -1,6 +1,7 @@
 package servicediscovery
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	grpconn "github.com/liangboceo/yuanboot/grpc/conn"
 	"github.com/liangboceo/yuanboot/pkg/httpclient"

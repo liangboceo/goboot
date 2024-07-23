@@ -1,6 +1,7 @@
 package etcd
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	sd "github.com/liangboceo/yuanboot/pkg/servicediscovery"
 )
