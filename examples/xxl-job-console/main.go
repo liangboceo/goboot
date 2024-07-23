@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions/configuration"
 	"github.com/liangboceo/yuanboot/pkg/scheduler"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 func main() {

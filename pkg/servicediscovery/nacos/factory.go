@@ -1,9 +1,9 @@
 package nacos
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	sd "github.com/liangboceo/yuanboot/pkg/servicediscovery"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 func UseServiceDiscovery(serviceCollection *dependencyinjection.ServiceCollection) {

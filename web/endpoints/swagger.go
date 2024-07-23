@@ -2,13 +2,13 @@ package endpoints
 
 import (
 	"fmt"
+	"github.com/liangboceo/reflectx"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/xlog"
 	"github.com/liangboceo/yuanboot/pkg/swagger"
 	"github.com/liangboceo/yuanboot/web/context"
 	"github.com/liangboceo/yuanboot/web/mvc"
 	"github.com/liangboceo/yuanboot/web/router"
-	"github.com/yoyofxteam/reflectx"
 	"reflect"
 	"regexp"
 	"strings"

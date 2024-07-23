@@ -2,7 +2,6 @@ package abstractions
 
 import (
 	"github.com/liangboceo/yuanboot/abstractions/hostenv"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 type HostBuilderContext struct {

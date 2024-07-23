@@ -5,7 +5,7 @@ package main
 
 import (
 	"github.com/liangboceo/yuanboot/abstractions"
-	"github.com/yoyofxteam/dependencyinjection"
+	"github.com/liangboceo/dependencyinjection"
 	yrpc "github.com/liangboceo/yuanboot/grpc"
 	"github.com/liangboceo/yuanboot/pkg/servicediscovery/nacos"
 	"google.golang.org/grpc"
@@ -45,7 +45,7 @@ module {{.ModelName}}
 go 1.16
 
 require (
-	github.com/yoyofxteam/dependencyinjection v1.0.0
+	github.com/liangboceo/dependencyinjection v1.0.0
 	github.com/liangboceo/yuanboot {{.Version}}
 	github.com/golang/protobuf v1.5.2
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0

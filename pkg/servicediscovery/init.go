@@ -1,10 +1,10 @@
 package servicediscovery
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	"github.com/liangboceo/yuanboot/pkg/servicediscovery/strategy"
-	"github.com/yoyofxteam/dependencyinjection"
 	"strconv"
 	"time"
 )

@@ -6,7 +6,7 @@ require (
 	github.com/fasthttp/websocket v1.5.7
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/liangboceo/yuanboot v0.0.0
-	github.com/yoyofxteam/dependencyinjection v1.0.1
+	github.com/liangboceo/dependencyinjection v1.0.0
 	gorm.io/gorm v1.21.11
 )
 
@@ -66,7 +66,7 @@ require (
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.51.0 // indirect
-	github.com/yoyofxteam/reflectx v0.2.3 // indirect
+	github.com/liangboceo/reflectx v1.0.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.9.0 // indirect
 	go.uber.org/zap v1.21.0 // indirect

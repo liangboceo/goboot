@@ -1,6 +1,6 @@
 package abstractions
 
-import "github.com/yoyofxteam/dependencyinjection"
+import "github.com/liangboceo/dependencyinjection"
 
 // IHostBuilderDecorator Host Builder decorator or extension
 type IHostBuilderDecorator interface {

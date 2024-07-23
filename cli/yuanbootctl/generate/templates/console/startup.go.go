@@ -6,7 +6,7 @@ package {{.CurrentModelName}}
 import (
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/hosting"
-	"github.com/yoyofxteam/dependencyinjection"
+	"github.com/liangboceo/dependencyinjection"
 )
 
 type AppStartup struct {

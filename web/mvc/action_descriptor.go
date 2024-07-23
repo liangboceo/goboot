@@ -1,6 +1,6 @@
 package mvc
 
-import "github.com/yoyofxteam/reflectx"
+import "github.com/liangboceo/reflectx"
 
 type ActionDescriptor struct {
 	ActionName       string

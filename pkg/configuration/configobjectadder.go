@@ -1,9 +1,9 @@
 package configuration
 
 import (
+	"github.com/liangboceo/dependencyinjection"
+	"github.com/liangboceo/reflectx"
 	"github.com/liangboceo/yuanboot/abstractions"
-	"github.com/yoyofxteam/dependencyinjection"
-	"github.com/yoyofxteam/reflectx"
 	"reflect"
 )
 

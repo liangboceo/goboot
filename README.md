@@ -61,11 +61,11 @@ func main() {
 ## 依赖框架模块
 只涉及框架使用或贡献过的库
 ```go
-github.com/yoyofxteam/dependencyinjection
+github.com/liangboceo/dependencyinjection
 
-github.com/yoyofxteam/nacos-viper-remote  
+github.com/liangboceo/nacos-viper-remote  
 
-github.com/yoyofxteam/reflectx
+github.com/liangboceo/reflectx
 
 github.com/shima-park/agollo
 ```

@@ -1,9 +1,9 @@
 package scheduler
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/console"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 func NewXxlJobBuilder(config abstractions.IConfiguration) *abstractions.HostBuilder {

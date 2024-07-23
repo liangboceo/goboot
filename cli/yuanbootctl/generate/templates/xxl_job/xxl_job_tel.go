@@ -5,7 +5,7 @@ package {{.CurrentModelName}}
 
 import (
 	"github.com/liangboceo/yuanboot/abstractions/configuration"
-	"github.com/yoyofxteam/dependencyinjection"
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/pkg/scheduler"
 )
 
@@ -28,7 +28,7 @@ module "{{.ModelName}}"
 go 1.16
 
 require (
-	github.com/yoyofxteam/dependencyinjection v1.0.0
+	github.com/liangboceo/dependencyinjection v1.0.0
     github.com/liangboceo/yuanboot {{.Version}}
 	github.com/xxl-job/xxl-job-executor-go v0.6.1
 )

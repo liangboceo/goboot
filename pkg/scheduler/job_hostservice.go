@@ -4,12 +4,12 @@ import (
 	"bufio"
 	"context"
 	"fmt"
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/hosting"
 	"github.com/liangboceo/yuanboot/abstractions/platform/consolecolors"
 	"github.com/liangboceo/yuanboot/utils"
 	"github.com/xxl-job/xxl-job-executor-go"
-	"github.com/yoyofxteam/dependencyinjection"
 	"strings"
 )
 

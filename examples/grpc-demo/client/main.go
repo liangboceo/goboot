@@ -1,11 +1,11 @@
 package main
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/hosting"
 	"github.com/liangboceo/yuanboot/console"
 	"github.com/liangboceo/yuanboot/pkg/servicediscovery/nacos"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 func main() {

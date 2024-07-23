@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	yrpc "github.com/liangboceo/yuanboot/grpc"
 	"github.com/liangboceo/yuanboot/pkg/servicediscovery/nacos"
-	"github.com/yoyofxteam/dependencyinjection"
 	"google.golang.org/grpc"
 	pb "grpc-demo/proto/helloworld"
 	"grpc-demo/services"

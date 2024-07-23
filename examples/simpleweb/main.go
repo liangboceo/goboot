@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/xlog"
 	"github.com/liangboceo/yuanboot/pkg/configuration"
@@ -19,7 +20,6 @@ import (
 	"github.com/liangboceo/yuanboot/web/session"
 	"github.com/liangboceo/yuanboot/web/session/identity"
 	"github.com/liangboceo/yuanboot/web/session/store"
-	"github.com/yoyofxteam/dependencyinjection"
 	"simpleweb/contollers"
 	"simpleweb/hubs"
 	"simpleweb/models"

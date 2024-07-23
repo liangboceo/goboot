@@ -4,7 +4,6 @@ import (
 	"github.com/liangboceo/yuanboot/abstractions/servicediscovery"
 	grpconn "github.com/liangboceo/yuanboot/grpc/conn"
 	"github.com/liangboceo/yuanboot/pkg/httpclient"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 func UseGeneralServiceDiscovery(serviceCollection *dependencyinjection.ServiceCollection) {

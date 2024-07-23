@@ -1,8 +1,8 @@
 package health
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 func init() {

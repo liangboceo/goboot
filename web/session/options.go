@@ -1,9 +1,9 @@
 package session
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/web/session/identity"
 	"github.com/liangboceo/yuanboot/web/session/store"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 type Options struct {

@@ -2,7 +2,6 @@ package grpc
 
 import (
 	"github.com/liangboceo/yuanboot/abstractions"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 type HostBuilderDecorator struct {

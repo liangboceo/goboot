@@ -1,11 +1,11 @@
 package main
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/web"
 	"github.com/liangboceo/yuanboot/web/actionresult/extension"
 	"github.com/liangboceo/yuanboot/web/mvc"
-	"github.com/yoyofxteam/dependencyinjection"
 	"websockethub/controllers"
 	"websockethub/hubs"
 )

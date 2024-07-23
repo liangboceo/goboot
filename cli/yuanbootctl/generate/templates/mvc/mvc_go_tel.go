@@ -40,7 +40,7 @@ package {{.CurrentModelName}}
 
 import (
 	"github.com/liangboceo/yuanboot/abstractions"
-	"github.com/yoyofxteam/dependencyinjection"
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/web"
 	"github.com/liangboceo/yuanboot/web/actionresult/extension"
 	"github.com/liangboceo/yuanboot/web/mvc"
@@ -79,7 +79,7 @@ module {{.ModelName}}
 go 1.16
 
 require (
-	github.com/yoyofxteam/dependencyinjection v1.0.0
+	github.com/liangboceo/dependencyinjection v1.0.0
 	github.com/liangboceo/yuanboot {{.Version}}
 )
 `

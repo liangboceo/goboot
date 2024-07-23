@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/liangboceo/yuanboot/web/context"
 	"github.com/stretchr/testify/assert"
-	"github.com/yoyofxteam/reflectx"
 	"testing"
 )
 
@@ -17,7 +16,7 @@ import (
 //	"github.com/liangboceo/yuanboot/utils/Reflect"
 //	"github.com/liangboceo/yuanboot/web/context"
 //	"github.com/liangboceo/yuanboot/web/mvc"
-//	"github.com/yoyofxteam/reflectx"
+//	"github.com/liangboceo/reflectx"
 //	"testing"
 //)
 //

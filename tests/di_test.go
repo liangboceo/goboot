@@ -1,9 +1,9 @@
 package tests
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/magiconair/properties/assert"
-	"github.com/yoyofxteam/dependencyinjection"
 	"testing"
 )
 

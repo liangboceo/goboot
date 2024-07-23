@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 	"github.com/liangboceo/yuanboot/abstractions/hosting"
-	"github.com/yoyofxteam/dependencyinjection"
 )
 
 type AppStartup struct {

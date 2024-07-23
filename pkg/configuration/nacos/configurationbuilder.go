@@ -1,8 +1,8 @@
 package nacos
 
 import (
+	nacos_viper_remote "github.com/liangboceo/nacos-viper-remote"
 	"github.com/liangboceo/yuanboot/abstractions"
-	nacos_viper_remote "github.com/yoyofxteam/nacos-viper-remote"
 )
 
 func AddRemoteWithNacos(builder *abstractions.ConfigurationBuilder) *abstractions.ConfigurationBuilder {
