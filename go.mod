@@ -16,7 +16,7 @@ require (
 	github.com/hudl/fargo v1.4.0
 	github.com/jinzhu/copier v0.4.0
 	github.com/liangboceo/dependencyinjection v1.0.0
-	github.com/liangboceo/nacos-viper-remote v1.0.0
+	github.com/liangboceo/nacos-viper-remote v1.0.1
 	github.com/liangboceo/reflectx v1.0.0
 	github.com/magiconair/properties v1.8.7
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
