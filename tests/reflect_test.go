@@ -2,6 +2,7 @@ package tests
 
 import (
 	"fmt"
+	"github.com/liangboceo/reflectx"
 	"github.com/liangboceo/yuanboot/web/context"
 	"github.com/stretchr/testify/assert"
 	"testing"

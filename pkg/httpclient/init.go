@@ -1,6 +1,7 @@
 package httpclient
 
 import (
+	"github.com/liangboceo/dependencyinjection"
 	"github.com/liangboceo/yuanboot/abstractions"
 )
 
