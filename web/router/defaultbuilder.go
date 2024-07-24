@@ -111,7 +111,7 @@ func (router *DefaultRouterBuilder) MapSet(method, path string, handler func(ctx
 
 func (router *DefaultRouterBuilder) Map(method string, path string, handler func(ctx *context.HttpContext)) {
 	if len(path) < 1 || path[0] != '/' {
-		panic("Path should be like '/yoyo/go'")
+		panic("Path should be like '/boot/go'")
 	}
 	router.MapSet(method, path, handler)
 }

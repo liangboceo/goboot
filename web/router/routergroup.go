@@ -13,7 +13,7 @@ func (group *RouterGroup) Map(method string, path string, handler func(ctx *cont
 
 	routerPath := group.Name + path
 	if len(path) < 1 || path[0] != '/' {
-		panic("Path should be like '/yoyo/go'")
+		panic("Path should be like '/boot/go'")
 	}
 
 	group.RouterHandler.Map(method, routerPath, handler)
