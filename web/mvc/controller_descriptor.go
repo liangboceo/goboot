@@ -46,6 +46,10 @@ func NewControllerDescriptor(name string, controllerType reflect.Type, controlle
 			if attributeRoute != nil {
 				actionDescriptor.IsAttributeRoute = true
 				actionDescriptor.Route = attributeRoute
+				if attributeRoute.Method != "" {
+					actionDescriptor.ActionMethod = strings.ToLower(attributeRoute.Method)
+				}
+
 			}
 
 			actionDescriptors[actionName] = actionDescriptor
