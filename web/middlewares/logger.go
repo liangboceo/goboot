@@ -90,7 +90,7 @@ type Logger struct {
 }
 
 func (l *Logger) SetFormat(format string) {
-	l.template = template.Must(template.New("yoyofx_parser").Parse(format))
+	l.template = template.Must(template.New("yuanboot_parser").Parse(format))
 }
 
 func (l *Logger) SetDateFormat(format string) {
