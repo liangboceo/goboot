@@ -2,6 +2,8 @@ package xlog
 
 import (
 	logrus "github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
+	"io"
 	"os"
 )
 
@@ -13,9 +15,26 @@ type LogrusLogger struct {
 	class         string
 }
 
+type LogOptions struct {
+	LogPath         string `mapstructure:"log_path"`
+	LogLevel        string `mapstructure:"log_level"` // trace, debug, info, warn[ing], error, fatal, panic
+	LogMaxDiskUsage int64  `mapstructure:"log_max_disk_usage"`
+	LogMaxFileNum   int    `mapstructure:"log_max_file_num"`
+	appName         string `mapstructure:"app_name"`
+}
+
 func GetXLogger(class string) ILogger {
-	logger := GetClassLogger(class) // NewXLogger()
-	//logger.class = class
+	configViper := viper.New()
+	configViper.SetConfigFile("./log.yml")
+	err := configViper.ReadInConfig()
+	var option *LogOptions
+	if err == nil {
+		err = configViper.Sub("yuanboot.log").Unmarshal(&option)
+	}
+	if err != nil {
+		option = &LogOptions{LogLevel: "debug", LogPath: "./log", LogMaxDiskUsage: 102400000, LogMaxFileNum: 50, appName: "log"}
+	}
+	logger := GetClassLogger(class, option) // NewXLogger()
 	return logger
 }
 
@@ -29,16 +48,43 @@ func GetXLoggerWith(logger ILogger) ILogger {
 	return logger
 }
 
-func NewLogger() ILogger {
+func NewLogger(options *LogOptions) ILogger {
 	logger := logrus.New()
+	lw := &HourlySplit{
+		Dir:           options.LogPath,
+		FileFormat:    options.appName + "_2006-01-02T15",
+		MaxFileNumber: int64(options.LogMaxFileNum),
+		MaxDiskUsage:  options.LogMaxDiskUsage,
+	}
+	multiWriter := io.MultiWriter(os.Stdout, lw)
+	defer lw.Close()
+	logger.SetReportCaller(true)
+	logger.SetOutput(multiWriter)
+	lv, err := logrus.ParseLevel(options.LogLevel)
+	if err != nil {
+		lv = logrus.WarnLevel
+	}
+	logger.SetLevel(lv)
 	return &LogrusLogger{logger: logger, dateFormat: LoggerDefaultDateFormat}
 }
 
-func GetClassLogger(class string) ILogger {
+func GetClassLogger(class string, options *LogOptions) ILogger {
 	logger := logrus.New()
-	logger.Out = os.Stdout
-
-	logger.SetLevel(logrus.DebugLevel)
+	lw := &HourlySplit{
+		Dir:           options.LogPath,
+		FileFormat:    options.appName + "_2006-01-02T15",
+		MaxFileNumber: int64(options.LogMaxFileNum),
+		MaxDiskUsage:  options.LogMaxDiskUsage,
+	}
+	defer lw.Close()
+	multiWriter := io.MultiWriter(os.Stdout, lw)
+	logger.SetReportCaller(true)
+	logger.SetOutput(multiWriter)
+	lv, err := logrus.ParseLevel(options.LogLevel)
+	if err != nil {
+		lv = logrus.WarnLevel
+	}
+	logger.SetLevel(lv)
 	logger.Formatter = &TextFormatter{
 		DisableColors:   false,
 		ForceColors:     false,

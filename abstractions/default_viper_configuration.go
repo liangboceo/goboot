@@ -30,7 +30,7 @@ func NewConfiguration(configContext *ConfigurationContext) *Configuration {
 	defaultConfig := viper.New()
 	if configContext.enableEnv {
 		defaultConfig.AutomaticEnv()
-		defaultConfig.SetEnvPrefix("YYG")
+		defaultConfig.SetEnvPrefix("YUANBOOT")
 	}
 	if configContext.enableFlag {
 		flag.String("app", "", "application name")
@@ -206,7 +206,8 @@ func (c *Configuration) RefreshBy(name string) {
 	delete(c.configMap, name)
 }
 
-/**
+/*
+*
 bindEnvDSL 读取DSL:环境变量 -> ${ENV:DEFAULT}
 */
 func (c *Configuration) bindEnvDSL(dslKey string, originalKey string) (interface{}, error) {

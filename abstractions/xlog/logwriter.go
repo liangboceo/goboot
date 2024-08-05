@@ -1,13 +1,11 @@
 package xlog
 
 import (
-	"fmt"
 	"math"
 	"os"
 	"path/filepath"
 	"sort"
 	"sync"
-	"syscall"
 	"time"
 )
 
@@ -186,19 +184,6 @@ func (a *HourlySplit) Write(b []byte) (n int, err error) {
 	// set write timeout to avoid block when disk full.
 	a.file.SetWriteDeadline(time.Now().Add(time.Second))
 	n, err = a.file.Write(b)
-	if err != nil {
-		stat := syscall.Statfs_t{}
-		err = syscall.Statfs(a.Dir, &stat)
-		if err != nil {
-			return 0, err
-		}
-		av := stat.Bavail * uint64(stat.Bsize)
-		if av < 1024*1024 {
-			fmt.Printf("avail size=%d", av)
-			fmt.Println("disk just avail %d bytes, urgent", av)
-			a.urgentLimit()
-		}
-	}
 	return
 }
 

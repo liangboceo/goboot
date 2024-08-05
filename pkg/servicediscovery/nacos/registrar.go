@@ -61,6 +61,7 @@ func NewServerDiscovery(option *Config) servicediscovery.IServiceDiscovery {
 		NotLoadCacheAtStart: true,
 		LogLevel:            "info",
 	}
+
 	if option.Auth != nil && option.Auth.Enable {
 		clientConfig.Username = option.Auth.User
 		clientConfig.Password = option.Auth.Password
