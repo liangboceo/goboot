@@ -20,7 +20,7 @@ type LogOptions struct {
 	LogLevel        string `mapstructure:"log_level"` // trace, debug, info, warn[ing], error, fatal, panic
 	LogMaxDiskUsage int64  `mapstructure:"log_max_disk_usage"`
 	LogMaxFileNum   int    `mapstructure:"log_max_file_num"`
-	appName         string `mapstructure:"app_name"`
+	AppName         string `mapstructure:"app_name"`
 }
 
 func GetXLogger(class string) ILogger {
@@ -32,7 +32,7 @@ func GetXLogger(class string) ILogger {
 		err = configViper.Sub("yuanboot.log").Unmarshal(&option)
 	}
 	if err != nil {
-		option = &LogOptions{LogLevel: "debug", LogPath: "./log", LogMaxDiskUsage: 102400000, LogMaxFileNum: 50, appName: "log"}
+		option = &LogOptions{LogLevel: "debug", LogPath: "./log", LogMaxDiskUsage: 102400000, LogMaxFileNum: 50, AppName: "log"}
 	}
 	logger := GetClassLogger(class, option) // NewXLogger()
 	return logger
@@ -52,7 +52,7 @@ func NewLogger(options *LogOptions) ILogger {
 	logger := logrus.New()
 	lw := &HourlySplit{
 		Dir:           options.LogPath,
-		FileFormat:    options.appName + "_2006-01-02T15",
+		FileFormat:    options.AppName + "_2006-01-02T15",
 		MaxFileNumber: int64(options.LogMaxFileNum),
 		MaxDiskUsage:  options.LogMaxDiskUsage,
 	}
@@ -72,7 +72,7 @@ func GetClassLogger(class string, options *LogOptions) ILogger {
 	logger := logrus.New()
 	lw := &HourlySplit{
 		Dir:           options.LogPath,
-		FileFormat:    options.appName + "_2006-01-02T15",
+		FileFormat:    options.AppName + "_2006-01-02T15",
 		MaxFileNumber: int64(options.LogMaxFileNum),
 		MaxDiskUsage:  options.LogMaxDiskUsage,
 	}
