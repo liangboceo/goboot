@@ -103,7 +103,7 @@ func (ops *GoRedisStandaloneOps) RandomKey() (string, error) {
 	return ops.client.RandomKey(ctx).Result()
 }
 
-//---------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------
 // list ops
 func (ops *GoRedisStandaloneOps) LPop(key string) (string, error) {
 	return ops.client.LPop(ctx, key).Result()
@@ -456,4 +456,26 @@ func (ops *GoRedisStandaloneOps) ZRevRank(key, member string) int64 {
 
 func (ops *GoRedisStandaloneOps) ZScore(key, member string) float64 {
 	return ops.client.ZScore(ctx, key, member).Val()
+}
+
+func (ops *GoRedisStandaloneOps) Info() (string, error) {
+	return ops.client.Info(ctx).Result()
+}
+
+func (ops *GoRedisStandaloneOps) ListKeys(page uint64, pattern string, pageSize int64) ([]string, int, error) {
+	if pageSize <= 0 {
+		pageSize = 100
+	}
+	if pageSize > 1000 {
+		pageSize = 1000
+	}
+	if page <= 0 {
+		page = 1
+	}
+	if pattern == "" {
+		pattern = "*"
+	}
+	allKeys, _ := ops.client.Keys(ctx, pattern).Result()
+	keys, _, err := ops.client.Scan(ctx, (page-1)*uint64(pageSize), pattern, pageSize).Result()
+	return keys, len(allKeys), err
 }

@@ -2,7 +2,7 @@ package redis
 
 import "time"
 
-//IClient redis client interface
+// IClient redis client interface
 type IClient interface {
 	//SetSerializer set value serializer
 	SetSerializer(ISerializer)
@@ -33,4 +33,6 @@ type IClient interface {
 	HasKey(key string) bool
 	// RandomKey return random Key for db
 	RandomKey() (string, error)
+	Info() (string, error)
+	ListKeys(page uint64, pattern string, pageSize int64) ([]string, int64, error)
 }
