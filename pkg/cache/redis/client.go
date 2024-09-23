@@ -143,7 +143,7 @@ func (c *Client) Close() error {
 	return c.ops.Close()
 }
 
-func (c *Client) ListKeys(page uint64, pattern string, pageSize int64) ([]string, int64, error) {
+func (c *Client) ListKeys(page uint64, pattern string, pageSize int64) ([]string, int, error) {
 	return c.ops.ListKeys(page, pattern, pageSize)
 }
 func (c *Client) Info() (string, error) {

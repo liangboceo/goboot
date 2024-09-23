@@ -34,5 +34,5 @@ type IClient interface {
 	// RandomKey return random Key for db
 	RandomKey() (string, error)
 	Info() (string, error)
-	ListKeys(page uint64, pattern string, pageSize int64) ([]string, int64, error)
+	ListKeys(page uint64, pattern string, pageSize int64) ([]string, int, error)
 }

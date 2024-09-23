@@ -80,5 +80,5 @@ type Ops interface {
 	ZRevRank(key, member string) int64
 	ZScore(key, member string) float64
 	Info() (string, error)
-	ListKeys(page uint64, pattern string, pageSize int64) ([]string, int64, error)
+	ListKeys(page uint64, pattern string, pageSize int64) ([]string, int, error)
 }
